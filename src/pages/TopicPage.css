@@ -1,0 +1,29 @@
+.topic-page {
+  padding-bottom: var(--space-8);
+}
+
+.topic-header {
+  padding: var(--space-8) 0;
+  margin-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+.topic-main-desc {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.topic-feed {
+  margin-top: var(--space-4);
+}
+
+.feed-title {
+  margin-bottom: var(--space-4);
+  font-size: 1.25rem;
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-2);
+}

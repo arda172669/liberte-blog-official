@@ -1,0 +1,63 @@
+.archive-page {
+  padding: var(--space-6) 0 var(--space-10);
+}
+
+.archive-header {
+  margin-bottom: var(--space-8);
+}
+
+.max-w-700 {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.archive-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.archive-card {
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  border-left: 3px solid var(--color-gold);
+  transition: transform var(--transition-normal);
+}
+
+.archive-card:hover {
+  transform: translateX(5px);
+}
+
+.archive-card-meta {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--space-2);
+}
+
+.archive-card-title {
+  font-size: 1.75rem;
+  margin-bottom: var(--space-2);
+}
+
+.archive-card-title a:hover {
+  text-decoration: underline;
+}
+
+.archive-card-desc {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-4);
+}
+
+.archive-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: var(--space-3);
+  color: var(--color-text-tertiary);
+}

@@ -76,7 +76,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-p, span, div, a, li, button, input, textarea {
+p, span, div, a, li, button, input, textarea, article, section, main, header, footer {
   font-family: var(--font-sans) !important;
 }
 
@@ -125,6 +125,7 @@ img {
 
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans) !important;
   line-height: 1.2;
   margin-bottom: var(--space-3);
   font-weight: 600;

@@ -17,6 +17,7 @@ const ArticleCard = ({ article }) => {
         </div>
       </div>
       <div className="article-content">
+        <span className="article-id text-gold">Yazı ID #{article.id}</span>
         <Link to={`/article/${article.id}`}>
           <h3 className="article-title ">{article.title}</h3>
         </Link>

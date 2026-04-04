@@ -52,6 +52,22 @@
   margin-bottom: var(--space-4);
 }
 
+.archive-subcategory-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.archive-subcategory-pill {
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-full);
+  background: rgba(232, 195, 102, 0.1);
+  border: 1px solid rgba(232, 195, 102, 0.22);
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
 .archive-card-footer {
   display: flex;
   justify-content: space-between;

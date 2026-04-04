@@ -2,19 +2,18 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import ArticleCard from '../components/ArticleCard';
 import './AuthorProfile.css';
-import { authors, articles, topics } from '../data/mockData';
+import { authors, articles, categories } from '../data/mockData';
 
 const AuthorProfile = () => {
   const { id } = useParams();
   
   const currentAuthor = authors.find(a => a.id === id) || authors[0];
   
-  // Get articles for this author and attach topic data
   const authorArticles = articles
     .filter(a => a.authorId === currentAuthor.id)
     .map(a => {
-       const topicInfo = topics.find(t => t.id === a.topicId);
-       return { ...a, author: currentAuthor.name, topic: topicInfo };
+       const categoryInfo = categories.find((category) => category.id === a.categoryId);
+       return { ...a, author: currentAuthor.name, category: categoryInfo };
     });
 
   return (

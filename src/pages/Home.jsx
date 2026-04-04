@@ -2,17 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ArticleCard from '../components/ArticleCard';
 import './Home.css';
-import { topics, articles, authors } from '../data/mockData';
+import { articles, authors } from '../data/mockData';
 
 const Home = () => {
-  // Get recent 3 articles
   const recentArticlesData = articles.slice(0, 3).map(a => {
     const author = authors.find(aut => aut.id === a.authorId);
     return { ...a, author: author ? author.name : 'Gizli Yazar' };
   });
-
-  // Featured topic is the first one (most recent week)
-  const featuredTopic = topics[0];
 
   return (
     <div className="home-page">
@@ -22,21 +18,8 @@ const Home = () => {
             Özgürlük, İstisna Değil <span className="text-gold">Kuraldır.</span>
           </h1>
           <div className="hero-actions">
-            <Link to={`/topic/${featuredTopic.id}`} className="btn btn-primary">Haftanın Konusu</Link>
-            <Link to="/authors" className="btn">Yazarları Gör</Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="featured-topic-section">
-        <div className="container">
-          <div className="glass-panel featured-topic-card text-center">
-            <span className="topic-badge text-gold">Bu Haftanın Gündemi • {featuredTopic.dateRange}</span>
-            <h2 className="topic-title">{featuredTopic.title}</h2>
-            <p className="topic-desc text-secondary">
-              {featuredTopic.desc}
-            </p>
-            <Link to={`/topic/${featuredTopic.id}`} className="btn btn-primary">Tüm Yazıları Oku</Link>
+            <Link to="/archive" className="btn btn-primary">Kategorileri İncele</Link>
+            <Link to="/authors" className="btn">Yazarlari Gor</Link>
           </div>
         </div>
       </section>

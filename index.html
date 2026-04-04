@@ -5,6 +5,21 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>liberte-projesi</title>
+    <script>
+      const isViteDevServer =
+        ['localhost', '127.0.0.1'].includes(window.location.hostname) &&
+        /^51\d{2}$/.test(window.location.port);
+
+      const shouldOpenDist =
+        !isViteDevServer &&
+        !window.location.pathname.includes('/dist/');
+
+      if (shouldOpenDist) {
+        const target = new URL('./dist/', window.location.href);
+        target.hash = window.location.hash;
+        window.location.replace(target);
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -1,0 +1,105 @@
+.search-page {
+  padding: var(--space-4) 0 var(--space-10);
+}
+
+.search-hero {
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-5);
+  background:
+    radial-gradient(circle at top right, rgba(232, 195, 102, 0.16), transparent 28%),
+    rgba(28, 28, 33, 0.6);
+}
+
+.search-summary {
+  max-width: 720px;
+  font-size: 1.05rem;
+}
+
+.search-empty {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+}
+
+.search-section {
+  margin-top: var(--space-6);
+}
+
+.search-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.search-topic-grid,
+.search-author-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-4);
+}
+
+.search-topic-card,
+.search-author-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+}
+
+.search-card-icon {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  color: var(--color-gold);
+  background: rgba(232, 195, 102, 0.12);
+  border: 1px solid rgba(232, 195, 102, 0.2);
+}
+
+.search-card-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.search-card-link {
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+.search-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.search-pill {
+  padding: 0.35rem 0.7rem;
+  border-radius: var(--radius-full);
+  background: rgba(232, 195, 102, 0.08);
+  border: 1px solid rgba(232, 195, 102, 0.2);
+  color: var(--color-text-secondary);
+  font-size: 0.88rem;
+}
+
+@media (max-width: 640px) {
+  .search-hero,
+  .search-empty,
+  .search-topic-card,
+  .search-author-card {
+    padding: var(--space-4);
+  }
+
+  .search-section-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

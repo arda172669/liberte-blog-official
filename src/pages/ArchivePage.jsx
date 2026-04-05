@@ -34,7 +34,7 @@ const ArchivePage = () => {
                   ))}
               </div>
               <div className="archive-card-footer">
-                <Link to={`/category/${category.id}`} className="btn">Yazıları İncele</Link>
+                <Link to={`/category/${category.id}`} className="btn archive-card-button">Yazıları İncele</Link>
               </div>
             </div>
           ))}

@@ -88,8 +88,8 @@ export const authors = [
   },
   {
     id: 'arda',
-    name: 'arda',
-    bio: 'Ekonomi, fikir tarihi ve politik teori ekseninde uzun form analizler kaleme alan yazar.'
+    name: 'Arda',
+    bio: 'Kapitalist liberteryen çizgide akademik analizler üreten yazar.'
   }
 ];
 

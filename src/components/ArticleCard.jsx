@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, MessageSquare } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import './ArticleCard.css';
 
 
@@ -27,9 +27,6 @@ const ArticleCard = ({ article }) => {
         <Link to={`/article/${article.id}`} className="read-more cursor-pointer">
           Devamını Oku <ArrowRight size={16} />
         </Link>
-        <div className="article-stats text-secondary cursor-pointer hover-gold">
-           <MessageSquare size={16}/> {article.commentsCount}
-        </div>
       </div>
     </article>
   );

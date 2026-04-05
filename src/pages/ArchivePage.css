@@ -1,9 +1,9 @@
 .archive-page {
-  padding: var(--space-6) 0 var(--space-10);
+  padding: var(--space-5) 0 var(--space-8);
 }
 
 .archive-header {
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-5);
 }
 
 .max-w-700 {
@@ -12,16 +12,16 @@
 }
 
 .archive-timeline {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-5);
-  max-width: 800px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 940px;
   margin: 0 auto;
 }
 
 .archive-card {
-  padding: var(--space-5);
-  border-radius: var(--radius-lg);
+  padding: 0.95rem 1rem;
+  border-radius: 14px;
   border-left: 3px solid var(--color-gold);
   transition: transform var(--transition-normal);
 }
@@ -31,16 +31,16 @@
 }
 
 .archive-card-meta {
-  font-size: 0.85rem;
+  font-size: 0.72rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: var(--space-2);
+  letter-spacing: 0.9px;
+  margin-bottom: 0.35rem;
 }
 
 .archive-card-title {
-  font-size: 1.75rem;
-  margin-bottom: var(--space-2);
+  font-size: 1.18rem;
+  margin-bottom: 0.3rem;
 }
 
 .archive-card-title a:hover {
@@ -48,32 +48,45 @@
 }
 
 .archive-card-desc {
-  font-size: 1.1rem;
-  margin-bottom: var(--space-4);
+  font-size: 0.9rem;
+  line-height: 1.45;
+  margin-bottom: 0.75rem;
 }
 
 .archive-subcategory-list {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-2);
-  margin-bottom: var(--space-4);
+  gap: 0.35rem;
+  margin-bottom: 0.75rem;
 }
 
 .archive-subcategory-pill {
-  padding: 0.4rem 0.8rem;
+  padding: 0.24rem 0.55rem;
   border-radius: var(--radius-full);
   background: rgba(232, 195, 102, 0.1);
   border: 1px solid rgba(232, 195, 102, 0.22);
   color: var(--color-text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.75rem;
 }
 
 .archive-card-footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
-  padding-top: var(--space-3);
+  padding-top: 0.7rem;
   color: var(--color-text-tertiary);
+}
+
+.archive-card-button {
+  padding: 0.45rem 0.8rem;
+  font-size: 0.82rem;
+}
+
+@media (max-width: 768px) {
+  .archive-timeline {
+    grid-template-columns: 1fr;
+    max-width: 760px;
+  }
 }

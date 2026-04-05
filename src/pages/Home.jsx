@@ -27,7 +27,7 @@ const Home = () => {
       <section className="recent-articles-section">
         <div className="container">
           <div className="section-header">
-            <h2>Son Eklenen Argümanlar</h2>
+            <h2>Son Eklenen Yazılar</h2>
           </div>
           <div className="articles-grid">
             {recentArticlesData.map(article => (

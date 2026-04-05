@@ -4,6 +4,19 @@ import { ArrowLeft, Share2, ThumbsDown, ThumbsUp } from 'lucide-react';
 import './ArticleView.css';
 import { articles, authors, categories, subcategories } from '../data/mockData';
 
+const getVisitorId = () => {
+  const storageKey = 'liberte-visitor-id';
+  const existingId = window.localStorage.getItem(storageKey);
+
+  if (existingId) {
+    return existingId;
+  }
+
+  const nextId = window.crypto?.randomUUID?.() || `visitor-${Date.now()}`;
+  window.localStorage.setItem(storageKey, nextId);
+  return nextId;
+};
+
 const ArticleView = () => {
   const { id } = useParams();
   const location = useLocation();
@@ -13,27 +26,55 @@ const ArticleView = () => {
   const authorData = authors.find(a => a.id === articleData.authorId);
   const categoryData = categories.find((category) => category.id === articleData.categoryId) || categories[0];
   const subcategoryData = subcategories.find((subcategory) => subcategory.id === articleData.subcategoryId);
-  const storageKey = `article-reaction-${articleData.id}`;
   const [reaction, setReaction] = useState(null);
+  const [counts, setCounts] = useState({ like: 0, dislike: 0 });
+  const [reactionState, setReactionState] = useState('loading');
+  const [reactionMessage, setReactionMessage] = useState('');
   const [shareState, setShareState] = useState('idle');
 
   useEffect(() => {
-    const storedReaction = window.localStorage.getItem(storageKey);
-    setReaction(storedReaction === 'like' || storedReaction === 'dislike' ? storedReaction : null);
-  }, [storageKey]);
+    let isCancelled = false;
 
-  useEffect(() => {
-    if (reaction) {
-      window.localStorage.setItem(storageKey, reaction);
-      return;
-    }
+    const loadReactions = async () => {
+      try {
+        const visitorId = getVisitorId();
+        const response = await fetch(`/api/reactions/${articleData.id}?visitorId=${encodeURIComponent(visitorId)}`);
+        const data = await response.json();
 
-    window.localStorage.removeItem(storageKey);
-  }, [reaction, storageKey]);
+        if (!response.ok) {
+          throw new Error(data.error || 'Reaction data could not be loaded.');
+        }
+
+        if (isCancelled) {
+          return;
+        }
+
+        setCounts(data.counts ?? { like: 0, dislike: 0 });
+        setReaction(data.reaction ?? null);
+        setReactionState('ready');
+        setReactionMessage('');
+      } catch (error) {
+        if (isCancelled) {
+          return;
+        }
+
+        setReactionState('error');
+        setReactionMessage(
+          'Oy sistemi henuz baglanamadi. Vercel tarafinda KV ayarlari tamamlaninca herkese acik calisacak.'
+        );
+      }
+    };
+
+    loadReactions();
+
+    return () => {
+      isCancelled = true;
+    };
+  }, [articleData.id]);
 
   useEffect(() => {
     if (shareState !== 'copied') {
-      return undefined;
+      return;
     }
 
     const timer = window.setTimeout(() => {
@@ -44,11 +85,42 @@ const ArticleView = () => {
   }, [shareState]);
 
   const shareUrl = `${window.location.origin}${location.pathname}`;
-  const likeCount = reaction === 'like' ? 1 : 0;
-  const dislikeCount = reaction === 'dislike' ? 1 : 0;
 
-  const handleReaction = (nextReaction) => {
-    setReaction((currentReaction) => (currentReaction === nextReaction ? null : nextReaction));
+  const handleReaction = async (nextReaction) => {
+    if (reactionState === 'loading' || reactionState === 'saving') {
+      return;
+    }
+
+    try {
+      setReactionState('saving');
+      setReactionMessage('');
+
+      const response = await fetch(`/api/reactions/${articleData.id}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          visitorId: getVisitorId(),
+          reaction: nextReaction,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Reaction could not be saved.');
+      }
+
+      setCounts(data.counts ?? { like: 0, dislike: 0 });
+      setReaction(data.reaction ?? null);
+      setReactionState('ready');
+    } catch (error) {
+      setReactionState('error');
+      setReactionMessage(
+        'Oy kaydi su an tamamlanamadi. Vercel KV ayarlari eksikse once onu baglamamiz gerekecek.'
+      );
+    }
   };
 
   const handleShare = async () => {
@@ -79,9 +151,13 @@ const ArticleView = () => {
 
         <article className="article-main">
           <header className="article-header-section text-center">
-            <span className="topic-badge text-gold">{categoryData.title}</span>
-            {subcategoryData && <div className="article-id-badge">{subcategoryData.title}</div>}
-            <div className="article-id-badge">Yazı ID #{articleData.id}</div>
+            <div className="article-taxonomy">
+              <Link to={`/category/${categoryData.id}`} className="topic-badge article-category-link text-gold">
+                {categoryData.title}
+              </Link>
+              {subcategoryData && <span className="article-id-badge">{subcategoryData.title}</span>}
+              <span className="article-id-badge article-id-pill">Yazı ID #{articleData.id}</span>
+            </div>
             <h1 className="article-main-title">{articleData.title}</h1>
             <div className="article-meta text-secondary">
               <Link to={`/profile/${authorData.id}`} className="article-author-link hover-gold">{authorData.name}</Link>
@@ -109,31 +185,40 @@ const ArticleView = () => {
                 className={`btn reaction-btn ${reaction === 'like' ? 'is-active' : ''}`}
                 onClick={() => handleReaction('like')}
                 aria-pressed={reaction === 'like'}
+                disabled={reactionState === 'loading' || reactionState === 'saving'}
               >
-                <ThumbsUp size={18} /> Beğen ({likeCount})
+                <ThumbsUp size={18} /> Begen ({counts.like})
               </button>
               <button
                 type="button"
                 className={`btn reaction-btn ${reaction === 'dislike' ? 'is-active dislike-active' : ''}`}
                 onClick={() => handleReaction('dislike')}
                 aria-pressed={reaction === 'dislike'}
+                disabled={reactionState === 'loading' || reactionState === 'saving'}
               >
-                <ThumbsDown size={18} /> Katılmıyorum ({dislikeCount})
+                <ThumbsDown size={18} /> Katilmiyorum ({counts.dislike})
               </button>
               <button type="button" className="btn" onClick={handleShare}>
-                <Share2 size={18} /> Tartışmayı Paylaş
+                <Share2 size={18} /> Tartismayi Paylas
               </button>
             </div>
 
+            <div className="reaction-note text-secondary">
+              {reactionState === 'loading' && 'Oylar yukleniyor...'}
+              {reactionState === 'saving' && 'Oyun kaydediliyor...'}
+              {reactionState === 'ready' && reaction && 'Oyun kaydedildi ve herkese ortak sayaca islendi.'}
+              {reactionMessage}
+            </div>
+
             <div className="share-panel">
-              <span className="share-label text-secondary">Tartışma linki</span>
+              <span className="share-label text-secondary">Tartisma linki</span>
               <a href={shareUrl} className="share-link" target="_blank" rel="noreferrer">
                 {shareUrl}
               </a>
               <span className="share-status text-secondary">
-                {shareState === 'copied' && 'Link kopyalandı.'}
-                {shareState === 'shared' && 'Paylaşım penceresi açıldı.'}
-                {shareState === 'ready' && 'Kopyalama engellendi; link burada hazır.'}
+                {shareState === 'copied' && 'Link kopyalandi.'}
+                {shareState === 'shared' && 'Paylasim penceresi acildi.'}
+                {shareState === 'ready' && 'Kopyalama engellendi; link burada hazir.'}
               </span>
             </div>
           </footer>

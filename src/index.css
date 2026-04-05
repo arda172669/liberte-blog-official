@@ -23,9 +23,9 @@
   --space-2: 0.5rem;
   --space-3: 1rem;
   --space-4: 1.5rem;
-  --space-5: 2rem;
-  --space-6: 3rem;
-  --space-8: 4rem;
+  --space-5: 1.75rem;
+  --space-6: 2.5rem;
+  --space-8: 3.5rem;
   --space-10: 6rem;
 
   /* Border Radius */
@@ -35,7 +35,7 @@
   --radius-full: 9999px;
 
   /* Layout */
-  --container-width: 1100px;
+  --container-width: 1040px;
   
   /* Transitions */
   --transition-fast: 0.15s ease-in-out;
@@ -132,7 +132,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .page-title {
-  font-size: 3rem;
+  font-size: 2.7rem;
   margin-bottom: var(--space-2);
 }
 
@@ -141,7 +141,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-2) var(--space-4);
+  padding: 0.65rem 1.15rem;
   background-color: transparent;
   color: var(--color-text-primary);
   border: 1px solid var(--color-border);
@@ -184,8 +184,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .app-main {
   flex: 1;
-  padding-top: var(--space-6);
-  padding-bottom: var(--space-10);
+  padding-top: var(--space-5);
+  padding-bottom: var(--space-8);
 }
 
 /* Fade in animation for page loads */

@@ -5,10 +5,22 @@ import './Home.css';
 import { articles, authors } from '../data/mockData';
 
 const Home = () => {
-  const recentArticlesData = articles.slice(0, 3).map(a => {
-    const author = authors.find(aut => aut.id === a.authorId);
-    return { ...a, author: author ? author.name : 'Gizli Yazar' };
-  });
+  const ardaArticle = [...articles]
+    .filter(article => article.authorId === 'arda')
+    .sort((left, right) => right.id - left.id)[0];
+
+  const recentArticlesData = [
+    ardaArticle,
+    ...[...articles]
+      .filter(article => article.id !== ardaArticle?.id)
+      .sort((left, right) => right.id - left.id)
+      .slice(0, 2)
+  ]
+    .filter(Boolean)
+    .map(article => {
+      const author = authors.find(aut => aut.id === article.authorId);
+      return { ...article, author: author ? author.name : 'Gizli Yazar' };
+    });
 
   return (
     <div className="home-page">

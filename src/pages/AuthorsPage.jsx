@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, FileText, Layers3 } from 'lucide-react';
 import './AuthorsPage.css';
 import { articles, authors, categories, subcategories } from '../data/mockData';
+import ardaAvatar from '../assets/foto.jpeg';
 
 const AuthorsPage = () => {
   const authorsWithStats = authors.map((author) => {
@@ -63,11 +64,21 @@ const AuthorsPage = () => {
             {authorsWithStats.map((author) => (
               <article key={author.id} className="author-card glass-panel" role="listitem" aria-labelledby={`author-name-${author.id}`}>
                 <div className="author-card-top">
-                  <div className="author-card-avatar" aria-hidden="true">
-                    {author.name.split(' ').pop()?.charAt(0) || 'Y'}
-                  </div>
+                  <Link to={`/profile/${author.id}`} className="author-card-avatar-link" aria-hidden="true">
+                    <div className="author-card-avatar">
+                      {author.avatar === 'arda-avatar' ? (
+                        <img src={ardaAvatar} alt={author.name} className="author-avatar-img" />
+                      ) : (
+                        author.name.split(' ').pop()?.charAt(0) || 'Y'
+                      )}
+                    </div>
+                  </Link>
                   <div>
-                    <h3 id={`author-name-${author.id}`} className="author-card-name">{author.name}</h3>
+                    <h3 id={`author-name-${author.id}`} className="author-card-name">
+                      <Link to={`/profile/${author.id}`} className="hover-gold">
+                        {author.name}
+                      </Link>
+                    </h3>
                     <p className="author-card-meta text-secondary">
                       {author.categoryCount} kategori • {author.articleCount} yayın
                     </p>

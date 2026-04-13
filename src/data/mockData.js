@@ -88,8 +88,9 @@ export const authors = [
   },
   {
     id: 'arda',
-    name: 'Arda',
-    bio: 'Kapitalist liberteryen çizgide akademik analizler üreten yazar.'
+    name: 'Arda Arslan',
+    bio: 'Kapitalist, sol düşmanı, despot entelektüel.',
+    avatar: 'arda-avatar'
   }
 ];
 
@@ -101,7 +102,7 @@ export const articles = [
     authorId: 'arda',
     title: 'Emek Değer Teorisinin Enkazı: Ontolojik Bir Yanılgının Marjinalist Teşrihi',
     excerpt: 'Emek Değer Teorisi, değeri nesnel bir töz gibi kurgularken; marjinalist yaklaşım, değerin bireysel tercih ve marjinal faydadan doğduğunu gösterir.',
-    date: 'Bugün',
+    date: '2 Nisan 2026',
     commentsCount: 0,
     content: `İktisadi düşünce tarihi, insan eyleminin doğasını anlama çabasında iki temel paradigma arasında kesin bir kopuşa sahne olmuştur. Bir yanda, değerin nesnelerin içine gömülü, üretim sürecinin tarihsel bir tortusu olduğuna inanan klasik ve Marksist "Emek Değer Teorisi" (EDT); diğer yanda ise değerin, kıt kaynaklar ile tatmin edilmeyi bekleyen sonsuz insan arzuları arasındaki sübjektif ilişkiden doğduğunu kanıtlayan Marjinalist Devrim. Bugün, iktisadi analiz araçlarını kullanarak Emek Değer Teorisi'ne bakıldığında görülen şey, bilimsel bir açıklama modeli değil, 19. yüzyıl sanayi mekaniğine saplanıp kalmış metafizik bir inanç sistemidir.
 
@@ -159,7 +160,7 @@ Sonuç olarak, Emek Değer Teorisi, iktisadi düşünce tarihinin "flogiston" te
     authorId: 'yz-yazilari',
     title: 'Devlet İmtiyazları Olmaksızın Tröstlerin Sürdürülemezliği',
     excerpt: 'Monopollerin tarihsel incelemesi göstermektedir ki, uzun süreli ve tüketiciye zarar veren tekeller yalnızca regülasyonlar, tarifeler ve fikri mülkiyet yasaları gibi devlet tarafından sağlanan bariyerler sayesinde var olabilir.',
-    date: 'Dün',
+    date: '31 Mart 2026',
     commentsCount: 15,
     content: `Neo-klasik iktisadın statik "tam rekabet" (perfect competition) modeli, rekabetin özünü ıskalayan metodolojik bir hataya dayanır. Gerçek dünyada rekabet, aktörlerin belli başlı sabit verilere göre tepki verdiği bir durum değil; tam aksine, bu verilerin anbean üretildiği, sentezlendiği ve transfer edildiği dinamik bir "keşif sürecidir" (discovery procedure).\n\nMüdahaleci devlet paradigması, belirli bir pazarda tek bir firmanın tahakküm kurmasını (monopol) piyasa başarısızlığı olarak etiketlerken, aslında o firmanın katallaksi düzeni içerisinde tüketici tercihlerini geçici olarak en iyi optimize eden aktör olduğunu gözden kaçırmaktadır. Praksiyolojik bağlamda ele alırsak, eğer pazara yasal giriş engelleri (regülasyonlar, tarifeler, fikri mülkiyet yasaları) yoksa, bir "tekelin" sürdürülebilirliği tamamen rasyonel ve tüketici odaklı bir hizmet vermesine bağlıdır.\n\n**Metodolojik Bireycilik ve Bilgi Problemi**\nMerkezi planlamanın rasyonel bir kaynak tahsisi yapamamasının kalbinde yatan ekonomik hesaplama sorunu (economic calculation problem), tekelleşme argümanında da karşımıza çıkar. Fiyat mekanizması, milyonlarca insanın zımni ve dağınık olan (tacit and dispersed knowledge) bilgisini tek bir sentetik sinyalde iletir. Eğer bir tekel, kalitesini düşürür veya fiyatını "marjinal fayda" sınırlarını aşacak şekilde yukarı çekerse, bu devasa kâr marjı, piyasadaki diğer tüm potansiyel girişimciler için güçlü bir sinyal yaratacaktır.\n\nBu sinyal, pazara ikame mallar üretebilecek yeni rakipleri doğrudan cezbeder. Tröstlerin devasa boyutu, onları hantal kılarak inovasyon eşiğini düşürür. Zira firma büyüdükçe kendi iç bürokrasisini inşa eder ve pazarın uç noktalarındaki lokal bilgi akışından mahrum kalır.\n\n*Suni Giriş Engellerinin Ontolojisi*\nTarihsel perspektife baktığımızda, yıkılmaz ve uzun ömürlü olduğu iddia edilen tüm büyük monopollerin temelinde zımnen veya açıkça bir devlet ayrıcalığı bulunduğunu görebiliriz. Lisans zorunlulukları gibi kurumlar, "kaliteyi koruma" kisvesi altında aslında statükocu firmaları yeni rekabetçi tehditlerden korur. Tüketici egemenliğinin (consumer sovereignty) gerçekten tecelli edebilmesi için, sermaye kümülasyonunu sınırlayacak piyasa yapısına müdahale etmek yerine, "giriş bariyerlerinin" inşasında kullanılan fiziki zor kullanma tekelinin yani devlet mekanizmasının analiz edilmesi esastır.`
   },
@@ -170,7 +171,7 @@ Sonuç olarak, Emek Değer Teorisi, iktisadi düşünce tarihinin "flogiston" te
     authorId: 'yz-yazilari',
     title: 'Katallaksi Çerçevesinde Rekabetin Keşif Süreci',
     excerpt: 'Rekabet statik bir denge durumu değildir; dinamik bir keşif sürecidir. Bir firmanın pazar payını domine etmesi, o firmanın tüketici taleplerini en optimum şekilde karşıladığının praksiyolojik bir göstergesidir.',
-    date: 'Bugün',
+    date: '30 Mart 2026',
     commentsCount: 89,
     content: `Rekabet, geleneksel iktisat kitaplarının iddia ettiği gibi verili bir pazar yapısı içinde fiyatların dengelenmesi değil; tam aksine aktörlerin henüz bilmedikleri verileri keşfettikleri dinamik bir süreçtir. Friedrich Hayek’in "Keşif Süreci Olarak Rekabet" (Competition as a Discovery Procedure) makalesinde belirttiği gibi, hangi malın en kaliteli, hangi üretim yönteminin en verimli ve hangi fiyatın en rasyonel olduğu önceden bilinemez.\n\nBu bilgi ancak piyasa süreci içerisinde, deneme-yanılma ve kâr-zarar mekanizmaları aracılığıyla ortaya çıkar. Katallaktik düzen içerisinde bir firmanın pazar payının %100’e yaklaşması, o aktörün o anki teknolojik ve ekonomik girdilerle tüketici talebini en iyi optimize eden yapı olduğunu gösterir. Rekabetin önündeki tek gerçek engel, yasal ayrıcalıklar ve regülasyonlar yoluyla yeni girişlerin engellenmesidir. Eğer piyasa "açık" ise (legal barriers to entry yoksa), mevcut "tekel" sürekli bir tehdit altındadır ve tüketici egemenliğine hizmet etmek zorundadır.`
   },
@@ -181,7 +182,7 @@ Sonuç olarak, Emek Değer Teorisi, iktisadi düşünce tarihinin "flogiston" te
     authorId: 'yz-yazilari',
     title: 'Mülkiyet Hakları ve Doğal Tekel Mitolojisi',
     excerpt: '"Doğal tekel" argümanının metodolojik hataları üzerine bir inceleme. Mülkiyetin tahsisi piyasa süreçlerine bırakıldığında, potansiyel rekabet tehdidinin fiyatları her zaman marjinal maliyete yakınsayacak şekilde baskıladığı gösterilmiştir.',
-    date: 'Bugün',
+    date: '29 Mart 2026',
     commentsCount: 42,
     content: `İktisat literatüründe "doğal tekel" (natural monopoly) kavramı, yüksek sabit maliyetlerin ve ölçek ekonomilerinin olduğu pazarlarda tek bir firmanın tahakküm kurmasının kaçınılmaz olduğunu iddia eder. Ancak bu argüman, teknolojik inovasyonun ve ikame malların piyasa yapısını nasıl kökten değiştirdiğini hesaba katmaz. Elektrik, su veya telekomünikasyon gibi "doğal tekel" olduğu iddia edilen pek çok sektörün tarihsel incelemesi, bu tekellerin aslında verimlilikten ziyade devlet imtiyazları ve lisans korumalarıyla inşa edildiğini göstermektedir.\n\nMülkiyet haklarının mutlak korunması ve piyasada zorlayıcı müdahalenin yokluğu, doğal tekel olduğu iddia edilen yapıları "potansiyel rekabet" (contestable markets) baskısı altında tutar. Fiyatların marjinal maliyetin çok üzerine çekilmesi, yeni teknolojik çözümlerin ve alternatif hizmet sağlayıcıların piyasaya girişini kârlı hale getiren bir sinyal üretir.`
   },

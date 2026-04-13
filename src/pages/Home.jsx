@@ -16,11 +16,7 @@ const Home = () => {
       .sort((left, right) => right.id - left.id)
       .slice(0, 2)
   ]
-    .filter(Boolean)
-    .map(article => {
-      const author = authors.find(aut => aut.id === article.authorId);
-      return { ...article, author: author ? author.name : 'Gizli Yazar' };
-    });
+    .filter(Boolean);
 
   const featuredCategories = categories.map((category) => ({
     ...category,

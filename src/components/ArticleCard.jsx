@@ -2,16 +2,25 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import './ArticleCard.css';
-
+import ardaAvatar from '../assets/foto.jpeg';
+import { authors } from '../data/mockData';
 
 const ArticleCard = ({ article }) => {
+  const authorInfo = authors.find(aut => aut.id === article.authorId) || { name: 'Gizli Yazar' };
+
   return (
     <article className="article-card glass-panel">
       <div className="article-header">
         <div className="author-info">
-          <div className="author-avatar">{article.author.charAt(0)}</div>
+          <div className="author-avatar">
+            {authorInfo.avatar === 'arda-avatar' ? (
+              <img src={ardaAvatar} alt={authorInfo.name} className="author-avatar-card-img" />
+            ) : (
+              (authorInfo.name || 'G').charAt(0)
+            )}
+          </div>
           <div className="author-meta">
-            <Link to={`/profile/${article.authorId}`} className="author-name hover-gold">{article.author}</Link>
+            <Link to={`/profile/${article.authorId}`} className="author-name hover-gold">{authorInfo.name}</Link>
             <span className="article-date">{article.date}</span>
           </div>
         </div>

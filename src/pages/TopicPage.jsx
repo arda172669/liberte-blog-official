@@ -11,12 +11,10 @@ const CategoryPage = () => {
   const categoryArticles = articles
     .filter((article) => article.categoryId === currentCategory.id)
     .map(a => {
-      const author = authors.find(aut => aut.id === a.authorId);
       const subcategory = subcategories.find((item) => item.id === a.subcategoryId);
 
       return {
         ...a,
-        author: author ? author.name : 'Gizli Yazar',
         subcategory,
       };
     });

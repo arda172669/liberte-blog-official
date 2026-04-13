@@ -1,29 +1,30 @@
 .article-view {
-  padding: var(--space-2) 0 var(--space-8);
+  padding: var(--space-2) 0 var(--space-6);
 }
 
 .article-container {
-  max-width: 760px;
+  max-width: 720px;
 }
 
 .back-link {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-4);
   font-weight: 500;
   transition: color var(--transition-fast);
+  font-size: 0.9rem;
 }
 
 .article-header-section {
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-4);
 }
 
 .article-taxonomy {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
   margin-bottom: var(--space-3);
 }
@@ -32,19 +33,19 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 2.25rem;
-  padding: 0.35rem 0.9rem;
+  min-height: 2rem;
+  padding: 0.28rem 0.7rem;
   border-radius: var(--radius-full);
   text-decoration: none;
-  transition: transform var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
 }
 
 .article-category-link:hover {
-  transform: translateY(-1px);
+  background: rgba(216, 177, 91, 0.08);
 }
 
 .article-main-title {
-  font-size: 2.6rem;
+  font-size: 2.15rem;
   margin: 0 0 var(--space-3);
   line-height: 1.15;
 }
@@ -53,29 +54,29 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.35rem 0.75rem;
+  padding: 0.28rem 0.6rem;
   border-radius: var(--radius-full);
-  border: 1px solid rgba(232, 195, 102, 0.25);
-  background: rgba(232, 195, 102, 0.08);
+  border: 1px solid rgba(216, 177, 91, 0.22);
+  background: rgba(216, 177, 91, 0.06);
   color: var(--color-gold);
-  font-size: 0.85rem;
+  font-size: 0.76rem;
   font-weight: 600;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .article-id-pill {
-  border-color: rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.04);
-  color: rgba(255, 255, 255, 0.72);
+  border-color: var(--color-border);
+  background: var(--color-bg-alt);
+  color: var(--color-text-secondary);
 }
 
 .article-meta {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--space-3);
-  font-size: 1.05rem;
+  gap: var(--space-2);
+  font-size: 0.95rem;
 }
 
 .article-author-link {
@@ -85,9 +86,9 @@
 
 .article-body {
   font-family: var(--font-sans);
-  font-size: 1.06rem;
-  line-height: 1.75;
-  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  line-height: 1.72;
+  color: rgba(255, 255, 255, 0.86);
 }
 
 .article-body * {
@@ -95,35 +96,35 @@
 }
 
 .article-body p {
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-3);
 }
 
 .article-subheading {
-  font-size: 1.7rem;
-  margin-top: var(--space-5);
+  font-size: 1.45rem;
+  margin-top: var(--space-4);
   margin-bottom: var(--space-3);
   color: var(--color-text-primary);
 }
 
 .article-minor-heading {
-  font-size: 1.3rem;
+  font-size: 1.12rem;
   margin-top: var(--space-4);
   margin-bottom: var(--space-2);
   color: var(--color-gold);
 }
 
 .article-footer-section {
-  margin-top: var(--space-6);
-  padding: 1.2rem;
+  margin-top: var(--space-5);
+  padding: 1rem;
   border-radius: var(--radius-lg);
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-3);
 }
 
 .article-actions {
   display: flex;
-  gap: var(--space-4);
+  gap: var(--space-2);
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -148,7 +149,7 @@
 .reaction-note {
   min-height: 1.5rem;
   text-align: center;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
 }
 
 .share-panel {
@@ -156,13 +157,13 @@
   flex-direction: column;
   gap: var(--space-1);
   padding-top: var(--space-3);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid var(--color-border);
 }
 
 .share-label {
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.08em;
 }
 
 .share-link {
@@ -172,12 +173,12 @@
 
 .share-status {
   min-height: 1.5rem;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
 }
 
 @media (max-width: 768px) {
   .article-main-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   .article-taxonomy {

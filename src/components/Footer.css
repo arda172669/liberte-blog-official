@@ -1,6 +1,6 @@
 .site-footer {
   border-top: 1px solid var(--color-border);
-  padding: var(--space-6) 0;
+  padding: var(--space-5) 0;
   margin-top: auto;
   background-color: var(--color-bg-alt);
 }
@@ -14,7 +14,7 @@
 }
 
 .footer-title {
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--color-gold);
   margin-bottom: var(--space-1);
@@ -22,12 +22,12 @@
 }
 
 .footer-desc {
-  font-size: 0.9rem;
-  max-width: 300px;
+  font-size: 0.88rem;
+  max-width: 280px;
 }
 
 .footer-links {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
 }
 
 @media (max-width: 768px) {

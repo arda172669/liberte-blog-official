@@ -1,55 +1,42 @@
 .authors-page {
-  padding: var(--space-4) 0 var(--space-10);
+  padding-bottom: var(--space-6);
 }
 
-.authors-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.9fr);
-  gap: var(--space-5);
-  padding: var(--space-5);
-  border-radius: var(--radius-lg);
-  margin-bottom: var(--space-6);
-  position: relative;
-  overflow: hidden;
+.authors-header {
+  padding: var(--space-6) 0;
+  margin-bottom: var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
 }
 
-.authors-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at top right, rgba(232, 195, 102, 0.2), transparent 35%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.02), transparent 55%);
-  pointer-events: none;
-}
-
-.authors-hero-copy,
-.authors-overview {
-  position: relative;
-  z-index: 1;
-}
-
-.authors-intro {
-  max-width: 650px;
+.authors-main-desc {
+  max-width: 720px;
+  margin: 0 auto;
   font-size: 1rem;
+  line-height: 1.7;
 }
 
 .authors-overview {
+  padding: 0.9rem;
+  border-radius: var(--radius-lg);
+}
+
+.authors-overview-grid {
   display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: var(--space-3);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.7rem;
 }
 
 .overview-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 0.8rem;
   border-radius: var(--radius-md);
-  padding: 1.1rem;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
 }
 
 .overview-card strong {
   display: block;
-  font-size: 1.7rem;
+  font-size: 1.45rem;
   color: var(--color-gold);
   line-height: 1.1;
 }
@@ -57,67 +44,75 @@
 .overview-label {
   display: block;
   margin-bottom: var(--space-1);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
+}
+
+.authors-grid-section {
+  margin-top: var(--space-5);
 }
 
 .authors-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
 }
 
 .author-card {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
-  padding: 1.2rem;
-  border-radius: var(--radius-lg);
+  gap: 0.65rem;
+  padding: 0.8rem;
+  border-radius: var(--radius-md);
   min-height: 100%;
-  transition: transform var(--transition-normal), border-color var(--transition-normal);
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+  transition: border-color var(--transition-normal), background-color var(--transition-fast);
 }
 
-.author-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(232, 195, 102, 0.2);
+.author-card:hover,
+.author-card:focus-within {
+  border-color: rgba(216, 177, 91, 0.28);
+  background: #1a1c20;
 }
 
 .author-card-top {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
+  gap: 0.7rem;
 }
 
 .author-card-avatar {
-  width: 56px;
-  height: 56px;
+  width: 46px;
+  height: 46px;
   border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(232, 195, 102, 0.2), rgba(232, 195, 102, 0.05));
-  border: 1px solid rgba(232, 195, 102, 0.25);
+  background: var(--color-bg-alt);
+  border: 1px solid rgba(216, 177, 91, 0.25);
   color: var(--color-gold);
-  font-size: 1.45rem;
+  font-size: 1.15rem;
   font-weight: 700;
 }
 
 .author-card-name {
   margin-bottom: var(--space-1);
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 .author-card-meta {
-  font-size: 0.95rem;
+  font-size: 0.88rem;
 }
 
 .author-card-bio {
-  line-height: 1.7;
+  line-height: 1.6;
+  font-size: 0.92rem;
   flex-grow: 1;
 }
 
 .author-card-stats {
   display: flex;
-  gap: var(--space-3);
+  gap: var(--space-2);
   flex-wrap: wrap;
 }
 
@@ -126,12 +121,13 @@
   align-items: center;
   gap: var(--space-2);
   color: var(--color-text-secondary);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
 }
 
 .author-card-highlight {
-  padding-top: var(--space-3);
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.92rem;
 }
 
 .highlight-label {
@@ -146,13 +142,28 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
+  width: fit-content;
   color: var(--color-gold);
   font-weight: 500;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 820px) {
-  .authors-hero {
+  .authors-overview-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .authors-header {
+    padding: var(--space-5) 0;
+  }
+
+  .authors-overview {
+    padding: 0.8rem;
+  }
+
+  .authors-overview-grid {
     grid-template-columns: 1fr;
-    padding: var(--space-4);
   }
 }

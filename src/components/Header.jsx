@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { Feather, Menu, Search, Type, Maximize, ZoomIn, ZoomOut } from 'lucide-react';
 import './Header.css';
 
@@ -49,11 +49,11 @@ const Header = () => {
           <span className="brand-name ">Liberte</span>
         </Link>
         
-        <div className={`header-panel ${isMobileMenuOpen ? 'mobile-active' : 'desktop-only'}`}>
-          <nav className="main-nav">
-            <Link to="/" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Ana Sayfa</Link>
-            <Link to="/archive" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Kategoriler</Link>
-            <Link to="/authors" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Yazarlar</Link>
+        <div id="site-navigation" className={`header-panel ${isMobileMenuOpen ? 'mobile-active' : 'desktop-only'}`}>
+          <nav className="main-nav" aria-label="Ana gezinme">
+            <NavLink to="/" end className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`} onClick={() => setIsMobileMenuOpen(false)}>Ana Sayfa</NavLink>
+            <NavLink to="/archive" className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`} onClick={() => setIsMobileMenuOpen(false)}>Kategoriler</NavLink>
+            <NavLink to="/authors" className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`} onClick={() => setIsMobileMenuOpen(false)}>Yazarlar</NavLink>
           </nav>
 
           <form className="header-search" onSubmit={handleSearchSubmit}>
@@ -70,9 +70,11 @@ const Header = () => {
 
           <div className="header-actions">
             <button
+              type="button"
               onClick={handleTextSizeChange}
               className="btn accessibility-btn text-secondary hover-gold"
               title="Metin Boyutunu Değiştir"
+              aria-label="Metin boyutunu değiştir"
             >
               {textSize === 'small' && <ZoomOut size={18} />}
               {textSize === 'normal' && <Type size={18} />}
@@ -83,7 +85,14 @@ const Header = () => {
           </div>
         </div>
 
-        <button className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+        <button
+          type="button"
+          className="mobile-menu-btn"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={isMobileMenuOpen ? 'Menüyü kapat' : 'Menüyü aç'}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="site-navigation"
+        >
           <Menu size={24} />
         </button>
       </div>

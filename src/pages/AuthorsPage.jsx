@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, FileText, Layers3 } from 'lucide-react';
 import './AuthorsPage.css';
-import { articles, authors, categories } from '../data/mockData';
+import { articles, authors, categories, subcategories } from '../data/mockData';
 
 const AuthorsPage = () => {
   const authorsWithStats = authors.map((author) => {
@@ -23,70 +23,85 @@ const AuthorsPage = () => {
 
   return (
     <div className="authors-page">
-      <div className="container">
-        <header className="authors-hero glass-panel">
-          <div className="authors-hero-copy">
-            <span className="topic-badge text-gold">Yazarlar</span>
-            <h1 className="page-title">Yazarlar</h1>
-            <p className="authors-intro text-secondary">
-              Sitedeki metinleri ureten yazarlar, odaklandiklari alanlar ve son katkilarini burada bulabilirsiniz.
-            </p>
-          </div>
+      <header className="authors-header glass-panel">
+        <div className="container text-center">
+          <span className="topic-badge text-gold">Yazarlar</span>
+          <h1 className="page-title">Yazarlar</h1>
+          <p className="authors-main-desc text-secondary">
+            Sitedeki metinleri üreten yazarları, odaklandıkları alanları ve son katkılarını
+            kategori sayfalarıyla aynı okunabilir düzende inceleyebilirsiniz.
+          </p>
+        </div>
+      </header>
 
-          <div className="authors-overview">
+      <div className="container">
+        <section className="authors-overview glass-panel" aria-labelledby="authors-overview-title">
+          <h2 id="authors-overview-title" className="feed-title">Yazar özeti</h2>
+          <div className="authors-overview-grid">
             <div className="overview-card">
-              <span className="overview-label text-secondary">Aktif Yazar</span>
+              <span className="overview-label text-secondary">Aktif yazar</span>
               <strong>{authors.length}</strong>
             </div>
             <div className="overview-card">
-              <span className="overview-label text-secondary">Toplam Yazı</span>
+              <span className="overview-label text-secondary">Toplam yazı</span>
               <strong>{totalArticleCount}</strong>
             </div>
             <div className="overview-card">
               <span className="overview-label text-secondary">Kategori</span>
               <strong>{categories.length}</strong>
             </div>
+            <div className="overview-card">
+              <span className="overview-label text-secondary">Alt başlık</span>
+              <strong>{subcategories.length}</strong>
+            </div>
           </div>
-        </header>
+        </section>
 
-        <section className="authors-grid">
-          {authorsWithStats.map((author) => (
-            <article key={author.id} className="author-card glass-panel">
-              <div className="author-card-top">
-                <div className="author-card-avatar">
-                  {author.name.split(' ').pop()?.charAt(0) || 'Y'}
+        <section className="authors-grid-section" aria-labelledby="authors-grid-title">
+          <h2 id="authors-grid-title" className="feed-title">Yazar profilleri</h2>
+          <div className="authors-grid" role="list">
+            {authorsWithStats.map((author) => (
+              <article key={author.id} className="author-card glass-panel" role="listitem" aria-labelledby={`author-name-${author.id}`}>
+                <div className="author-card-top">
+                  <div className="author-card-avatar" aria-hidden="true">
+                    {author.name.split(' ').pop()?.charAt(0) || 'Y'}
+                  </div>
+                  <div>
+                    <h3 id={`author-name-${author.id}`} className="author-card-name">{author.name}</h3>
+                    <p className="author-card-meta text-secondary">
+                      {author.categoryCount} kategori • {author.articleCount} yayın
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h2 className="author-card-name">{author.name}</h2>
-                  <p className="author-card-meta text-secondary">
-                    {author.categoryCount} kategori • {author.articleCount} yayın
-                  </p>
+
+                <p className="author-card-bio text-secondary">{author.bio}</p>
+
+                <div className="author-card-stats" aria-label={`${author.name} istatistikleri`}>
+                  <div className="author-stat">
+                    <FileText size={16} aria-hidden="true" />
+                    <span>{author.articleCount} metin</span>
+                  </div>
+                  <div className="author-stat">
+                    <Layers3 size={16} aria-hidden="true" />
+                    <span>{author.totalComments} yorum</span>
+                  </div>
                 </div>
-              </div>
 
-              <p className="author-card-bio text-secondary">{author.bio}</p>
-
-              <div className="author-card-stats">
-                <div className="author-stat">
-                  <FileText size={16} />
-                  <span>{author.articleCount} metin</span>
+                <div className="author-card-highlight" aria-labelledby={`author-latest-${author.id}`}>
+                  <span id={`author-latest-${author.id}`} className="highlight-label text-gold">Son katkı</span>
+                  <p>{author.latestArticle ? author.latestArticle.title : 'Henüz yayın yok'}</p>
                 </div>
-                <div className="author-stat">
-                  <Layers3 size={16} />
-                  <span>{author.totalComments} yorum</span>
-                </div>
-              </div>
 
-              <div className="author-card-highlight">
-                <span className="highlight-label text-gold">Son katkı</span>
-                <p>{author.latestArticle ? author.latestArticle.title : 'Henüz yayın yok'}</p>
-              </div>
-
-              <Link to={`/profile/${author.id}`} className="author-card-link">
-                Profili İncele <ArrowRight size={16} />
-              </Link>
-            </article>
-          ))}
+                <Link
+                  to={`/profile/${author.id}`}
+                  className="author-card-link"
+                  aria-label={`${author.name} profilini incele`}
+                >
+                  Profili İncele <ArrowRight size={16} aria-hidden="true" />
+                </Link>
+              </article>
+            ))}
+          </div>
         </section>
       </div>
     </div>

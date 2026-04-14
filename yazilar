@@ -1,110 +1,6 @@
-export const categories = [
-  {
-    id: 'ekonomi',
-    title: 'Ekonomi',
-    shortDesc: 'Piyasa düzeni, para teorisi, rekabet ve mülkiyet tartışmaları.',
-    desc: 'Serbest piyasa, merkez bankacılığı, rekabet, tekelleşme ve fiyat mekanizması üzerine yazılar.',
-    mainDesc: 'Ekonomi kategorisi; piyasa süreçleri, merkez bankacılığı, rekabet, enflasyon, mülkiyet ve girişimcilik üzerine geliştirilen argümanları bir araya getirir.'
-  },
-  {
-    id: 'felsefe',
-    title: 'Felsefe',
-    shortDesc: 'Birey, etik, özgür irade ve bilgi problemleri etrafında kurulan tartışmalar.',
-    desc: 'Etik bireycilik, subjektif değer, metodoloji ve insan eylemi üzerine metinler.',
-    mainDesc: 'Felsefe kategorisi; bireycilik, etik, bilgi teorisi, praksiyoloji ve insan eyleminin ontolojik temelleri üzerine kurulu tartışmaları toplar.'
-  },
-  {
-    id: 'hukuk',
-    title: 'Hukuk',
-    shortDesc: 'Haklar, mülkiyet düzeni ve meşruiyet tartışmalarına odaklanan yazılar.',
-    desc: 'Mülkiyet hakları, doğal haklar, hukuki meşruiyet ve adalet anlayışı etrafında şekillenen içerikler.',
-    mainDesc: 'Hukuk kategorisi; hak teorisi, mülkiyet düzeni, bireysel dokunulmazlık ve zor kullanmanın meşruiyeti üzerine geliştirilen argümanları toplar.'
-  },
-  {
-    id: 'siyaset',
-    title: 'Siyaset',
-    shortDesc: 'Devletin kökeni, güç ilişkileri ve siyasal düzen eleştirileri.',
-    desc: 'Devlet teorisi, iktidar, sömürü ve siyasal kurumlar üzerine makaleler.',
-    mainDesc: 'Siyaset kategorisi; devletin kaynağı, siyasal meşruiyet, iktidar ilişkileri ve kurumsal tahakküm eleştirileri üzerinde yoğunlaşır.'
-  }
-];
+BAŞLIK: Emek Değer Teorisinin Enkazı: Ontolojik Bir Yanılgının Marjinalist Teşrihi
 
-export const subcategories = [
-  {
-    id: 'serbest-piyasa',
-    categoryId: 'ekonomi',
-    title: 'Serbest Piyasa',
-    shortDesc: 'Rekabet, girişimcilik ve piyasa koordinasyonu üzerine yazılar.'
-  },
-  {
-    id: 'para-teorisi',
-    categoryId: 'ekonomi',
-    title: 'Para Teorisi',
-    shortDesc: 'Enflasyon, merkez bankacılığı ve parasal düzen tartışmaları.'
-  },
-  {
-    id: 'etik',
-    categoryId: 'felsefe',
-    title: 'Etik',
-    shortDesc: 'Birey, değer ve ahlaki sorumluluk eksenindeki tartışmalar.'
-  },
-  {
-    id: 'bilgi-felsefesi',
-    categoryId: 'felsefe',
-    title: 'Bilgi Felsefesi',
-    shortDesc: 'Bilginin doğası, yöntem ve toplumsal düzenin kavranışı.'
-  },
-  {
-    id: 'mulkiyet-haklari',
-    categoryId: 'hukuk',
-    title: 'Mülkiyet Hakları',
-    shortDesc: 'Hakların sınırı, mülkiyetin tahsisi ve hukuki dokunulmazlık.'
-  },
-  {
-    id: 'hukuk-teorisi',
-    categoryId: 'hukuk',
-    title: 'Hukuk Teorisi',
-    shortDesc: 'Meşruiyet, normlar ve zor kullanmanın sınırları.'
-  },
-  {
-    id: 'devlet-teorisi',
-    categoryId: 'siyaset',
-    title: 'Devlet Teorisi',
-    shortDesc: 'Devletin kökeni, işlevi ve meşruiyetine dair argümanlar.'
-  },
-  {
-    id: 'siyasal-duzen',
-    categoryId: 'siyaset',
-    title: 'Siyasal Düzen',
-    shortDesc: 'Kurumsal güç, merkeziyetçilik ve yönetim biçimleri üzerine içerikler.'
-  }
-];
-
-export const authors = [
-  {
-    id: 'yz-yazilari',
-    name: 'sistem yazıları',
-    bio: 'Yapay zeka destekli analizler, kavramsal incelemeler ve kategorilere gore duzenlenmis metinler ureten yazar profili.'
-  },
-  {
-    id: 'wertfreiheit',
-    name: 'Wertfreiheit',
-    bio: 'Kapitalist, sol düşmanı, despot entelektüel.',
-    avatar: 'wertfreiheit-avatar'
-  }
-];
-
-export const articles = [
-  {
-    id: 8,
-    categoryId: 'ekonomi',
-    subcategoryId: 'serbest-piyasa',
-    authorId: 'wertfreiheit',
-    title: 'Emek Değer Teorisinin Enkazı: Ontolojik Bir Yanılgının Marjinalist Teşrihi',
-    excerpt: 'Emek Değer Teorisi, değeri nesnel bir töz gibi kurgularken; marjinalist yaklaşım, değerin bireysel tercih ve marjinal faydadan doğduğunu gösterir.',
-    date: '2 Nisan 2026',
-    commentsCount: 0,
-    content: `İktisadi düşünce tarihi, insan eyleminin doğasını anlama çabasında iki temel paradigma arasında kesin bir kopuşa sahne olmuştur. Bir yanda, değerin nesnelerin içine gömülü, üretim sürecinin tarihsel bir tortusu olduğuna inanan klasik ve Marksist "Emek Değer Teorisi" (EDT); diğer yanda ise değerin, kıt kaynaklar ile tatmin edilmeyi bekleyen sonsuz insan arzuları arasındaki sübjektif ilişkiden doğduğunu kanıtlayan Marjinalist Devrim. Bugün, iktisadi analiz araçlarını kullanarak Emek Değer Teorisi'ne bakıldığında görülen şey, bilimsel bir açıklama modeli değil, 19. yüzyıl sanayi mekaniğine saplanıp kalmış metafizik bir inanç sistemidir.
+İktisadi düşünce tarihi, insan eyleminin doğasını anlama çabasında iki temel paradigma arasında kesin bir kopuşa sahne olmuştur. Bir yanda, değerin nesnelerin içine gömülü, üretim sürecinin tarihsel bir tortusu olduğuna inanan klasik ve Marksist "Emek Değer Teorisi" (EDT); diğer yanda ise değerin, kıt kaynaklar ile tatmin edilmeyi bekleyen sonsuz insan arzuları arasındaki sübjektif ilişkiden doğduğunu kanıtlayan Marjinalist Devrim. Bugün, iktisadi analiz araçlarını kullanarak Emek Değer Teorisi'ne bakıldığında görülen şey, bilimsel bir açıklama modeli değil, 19. yüzyıl sanayi mekaniğine saplanıp kalmış metafizik bir inanç sistemidir.
 
 EDT'nin temel iddiası, bir malın değişim değerinin, o malın üretimi için harcanan "toplumsal olarak gerekli emek zamanı" tarafından belirlendiğidir. Bu iddia, ilk bakışta sezgisel bir çekiciliğe sahip gibi görünse de, analitik bıçak kemiğe dayandığında, teorinin ne fiyat oluşumunu, ne sermaye birikimini, ne de bireysel tercihleri açıklayabildiği görülür. Marjinalist perspektiften bakıldığında, EDT sadece yanlış değil, aynı zamanda "tersyüz edilmiş" bir gerçeklik algısıdır. Değer, geçmişte harcanan emekten (maliyetten) geleceğe (fiyata) akmaz; aksine, nihai tüketicinin sübjektif değerlemesinden geriye, üretim faktörlerine doğru akar. Bu yazının amacı, EDT'nin iç tutarsızlıklarını, öngörü yetersizliklerini ve epistemolojik iflasını; ahlaki veya politik bir jargonla değil, Carl Menger, Eugen von Böhm-Bawerk ve Ludwig von Mises'in inşa ettiği metodolojik bireycilik ve sübjektivizm temelinde, sert ve tavizsiz bir analitik çerçeveyle ortaya koymaktır.
 
@@ -151,18 +47,13 @@ Bu bağlamda, kârın ortadan kaldırılması girişimi (faizsiz ekonomi veya pl
 EDT'nin başarısızlığı, sadece matematiksel bir hata değildir; insan davranışının kökenine dair temel bir yanılgıdır. İnsanlar, maliyetlerine göre değil, amaçlarına göre hareket ederler. Maliyetler (emek dahil), bu amaçlara ulaşmak için katlanılan engellerdir, değerin kaynağı değil. Marjinalist bakış açısı, ekonomiyi kolektif hayaletlerin (sınıflar, uluslar, toplumsal emek) dansı olarak değil; amaçlarına ulaşmaya çalışan, sınırlı bilgiye sahip, zaman kısıtı altındaki bireylerin dinamik etkileşimi olarak resmeder. Bugün EDT'yi savunmak, astronomide Batlamyus sistemini savunmakla eşdeğerdir. Karmaşık yörünge düzeltmeleriyle (episikllerle) sistemi ayakta tutmaya çalışabilirsiniz, ancak Güneş merkezli (sübjektif değer merkezli) modelin sadeliği ve açıklayıcı gücü karşısında bu çaba beyhudedir. İktisadi gerçeklik; değerin sübjektif, maliyetin fırsat maliyeti, kârın ise risk ve zamanın bedeli olduğu bir dünyadır. Bunun dışındaki her iddia, bilimsel değil, teolojik bir inattır.
 
 **Sonuç: Bir Entelektüel Yanılgının Anatomisi**
-Sonuç olarak, Emek Değer Teorisi, iktisadi düşünce tarihinin "flogiston" teorisidir. Kimyanın flogistonu terk etmesi gibi, iktisadın da emek değer teorisini terk etmesi, bilimin ilerlemesi için bir zorunluluktu. Marjinalist Devrim, değeri metafizik bir buluttan indirip, insan tercihleri ve kıtlık gerçekliğine dayalı sağlam bir zemine oturtmuştur.`
-  },
-  {
-    id: 4,
-    categoryId: 'ekonomi',
-    subcategoryId: 'serbest-piyasa',
-    authorId: 'yz-yazilari',
-    title: 'Devlet İmtiyazları Olmaksızın Tröstlerin Sürdürülemezliği',
-    excerpt: 'Laissez-faire kapitalizmi ve rasyonel hesaplama teorisi ışığında tekelleşme olgusunun analizi: Devlet imtiyazları olmaksızın tröstlerin serbest piyasadaki doğal çözülme süreçleri ve yaratıcı yıkım dinamikleri.',
-    date: '14 Nisan 2026',
-    commentsCount: 15,
-    content: `Serbest piyasa dinamikleri içerisinde "tröst" veya "tekel" yapıların kalıcılığına dair yürütülen tartışmalar, genellikle piyasa dışı müdahalelerin ampirik sonuçları ile serbest rekabetin doğal çıktıları arasındaki ayrımın rasyonel bir şekilde yapılamamasından kaynaklanmaktadır. Laissez-faire kapitalizmi ve radikal liberteryen mülkiyet hakları perspektifinden bakıldığında, bir ekonomik aktörün devlet imtiyazları, sübvansiyonlar, gümrük duvarları veya yasal giriş engelleri olmaksızın piyasadaki hakimiyetini süresiz olarak koruması teknik olarak imkansızdır. Ekonomik verimlilik ve rasyonel hesaplama teorileri, serbest bir piyasada sermaye yoğunlaşmasının ancak tüketici tercihlerine en düşük maliyetle en yüksek faydayı sağladığı sürece devam edebileceğini, bu verimlilik eşiği aşıldığında ise "ölçek ekonomisizliği" (diseconomies of scale) ve rekabet baskısı nedeniyle tröstlerin çözülmeye mahkum olduğunu kanıtlamaktadır.
+Sonuç olarak, Emek Değer Teorisi, iktisadi düşünce tarihinin "flogiston" teorisidir. Kimyanın flogistonu terk etmesi gibi, iktisadın da emek değer teorisini terk etmesi, bilimin ilerlemesi için bir zorunluluktu. Marjinalist Devrim, değeri metafizik bir buluttan indirip, insan tercihleri ve kıtlık gerçekliğine dayalı sağlam bir zemine oturtmuştur.
+
+================================================================================
+
+BAŞLIK: Devlet İmtiyazları Olmaksızın Tröstlerin Sürdürülemezliği
+
+Serbest piyasa dinamikleri içerisinde "tröst" veya "tekel" yapıların kalıcılığına dair yürütülen tartışmalar, genellikle piyasa dışı müdahalelerin ampirik sonuçları ile serbest rekabetin doğal çıktıları arasındaki ayrımın rasyonel bir şekilde yapılamamasından kaynaklanmaktadır. Laissez-faire kapitalizmi ve radikal liberteryen mülkiyet hakları perspektifinden bakıldığında, bir ekonomik aktörün devlet imtiyazları, sübvansiyonlar, gümrük duvarları veya yasal giriş engelleri olmaksızın piyasadaki hakimiyetini süresiz olarak koruması teknik olarak imkansızdır. Ekonomik verimlilik ve rasyonel hesaplama teorileri, serbest bir piyasada sermaye yoğunlaşmasının ancak tüketici tercihlerine en düşük maliyetle en yüksek faydayı sağladığı sürece devam edebileceğini, bu verimlilik eşiği aşıldığında ise "ölçek ekonomisizliği" (diseconomies of scale) ve rekabet baskısı nedeniyle tröstlerin çözülmeye mahkum olduğunu kanıtlamaktadır.
 
 Ekonomik hesaplama teorisi açısından, bir tröstün devasa boyutlara ulaşması, firma içi işlem maliyetlerini ve bilgi asimetrisini artırır. Ludwig von Mises’in sosyalist planlama için öne sürdüğü "hesaplama sorunu", mikro düzeyde aşırı büyümüş ve piyasa sinyallerinden kopmuş tröst yapılarında da gözlemlenir. Firma büyüdükçe, kaynakların firma içi tahsisi piyasa fiyatları yerine bürokratik kararlara dayanmaya başlar. Bu durum, rasyonel sermaye tahsisini imkansız hale getirerek firmanın dışsal rakiplerine karşı çevikliğini yitirmesine neden olur. Serbest bir piyasada, devletin koruma kalkanı (lisanslama, patent zorbalığı veya vergi muafiyetleri) olmadığı sürece, bu tür hantal yapılar, daha küçük, inovatif ve operasyonel maliyetleri düşük girişimciler tarafından pazar payı kaybına uğratılır. Dolayısıyla, tröstlerin "sürdürülebilir" olduğu iddiası, ampirik verilerle değil, devlet destekli kartelleşme örneklerinin yanlış yorumlanmasıyla desteklenmektedir.
 
@@ -172,18 +63,13 @@ Radikal liberteryen mülkiyet hakları çerçevesinde, devletin "anti-tröst" ya
 
 Sermaye piyasalarının dinamik yapısı, statik bir tekel oluşumuna izin vermez. Arbitraj imkanları ve sermayenin en yüksek getiriye yönelme eğilimi, kâr marjlarının yapay olarak yüksek tutulduğu (tekel kârı) her sektöre yeni oyuncuları çeker. Eğer bir sektörde kâr marjları ortalamanın üzerindeyse ve yeni girişler gözlemlenmiyorsa, orada mutlaka devlet eliyle oluşturulmuş bir bariyer (ruhsatlandırma, yüksek asgari sermaye şartları veya teknik standart dayatmaları) mevcuttur. Laissez-faire ekonomisinde, sermaye sahipleri sürekli bir "yaratıcı yıkım" (creative destruction) tehdidi altındadır. Bugünün pazar lideri, yarının atıl sermaye yığınına dönüşebilir. Bu rasyonel devinim, devletin yapay korumaları olmaksızın hiçbir tröstün piyasa üzerinde kalıcı bir hegemonya kuramayacağının garantisidir.
 
-Sonuç olarak, tröstlerin serbest piyasada sürdürülemezliği, hem mikroekonomik verimlilik yasaları hem de makro düzeydeki sermaye akış kuralları ile sabittir. Devlet imtiyazları, bir firmanın verimsizleşmesine rağmen ayakta kalmasını sağlayan yapay bir yaşam desteğidir. Rasyonel-ekonomik perspektif, ekonomik büyümenin ve tüketici refahının anahtarının antitröst yasaları değil, devletin piyasadan tamamen çekilmesi ve mülkiyet haklarının mutlak korunması olduğunu vazeder. Devlet müdahalesinin ortadan kalktığı bir düzende, tröstler ya sürekli verimlilik artışı sağlayarak (ki bu toplum için faydalıdır) hayatta kalacak ya da piyasanın rasyonel eleme mekanizması tarafından tasfiye edileceklerdir. Veri kaybı ve hesaplama hataları üzerinden yükselen her türlü kolektivist veya müdahaleci kaygı, serbest piyasanın öz-düzenleme kapasitesini ampirik olarak göz ardı etmektedir.`
-  },
-  {
-    id: 5,
-    categoryId: 'ekonomi',
-    subcategoryId: 'serbest-piyasa',
-    authorId: 'yz-yazilari',
-    title: 'Katallaksi Çerçevesinde Rekabetin Keşif Süreci',
-    excerpt: 'Piyasa düzeninin statik bir denge değil, dinamik bir keşif süreci olarak analizi: Fiyat mekanizması, bilgi problemi ve Laissez-faire kapitalizminin kendiliğinden oluşan düzen (katallaksi) üzerindeki rasyonel etkisi.',
-    date: '14 Nisan 2026',
-    commentsCount: 89,
-    content: `Katallaksi, rasyonel-ekonomik düzlemde, merkezi bir planlama olmaksızın, bireylerin farklı amaç ve bilgi setlerine sahip olduğu bir ortamda mübadele ve fiyat sinyalleri aracılığıyla oluşan kendiliğinden düzeni ifade eder. Friedrich Hayek’in literatüre kazandırdığı bu kavram, piyasayı statik bir denge durumu olarak değil, dinamik bir "keşif süreci" olarak tanımlar. Bu perspektiften bakıldığında rekabet, mevcut verilerin bir sonucu değil; hangi kaynakların nerede, nasıl ve kimin için en verimli şekilde kullanılacağına dair verilerin bizzat üretildiği bir mekanizmadır. Radikal liberteryen mülkiyet hakları ve Laissez-faire kapitalizmi çerçevesinde rekabet, girişimcilerin piyasadaki gizli fırsatları, değişen tüketici tercihlerini ve teknolojik imkanları keşfetmesini sağlayan yegane rasyonel araçtır.
+Sonuç olarak, tröstlerin serbest piyasada sürdürülemezliği, hem mikroekonomik verimlilik yasaları hem de makro düzeydeki sermaye akış kuralları ile sabittir. Devlet imtiyazları, bir firmanın verimsizleşmesine rağmen ayakta kalmasını sağlayan yapay bir yaşam desteğidir. Rasyonel-ekonomik perspektif, ekonomik büyümenin ve tüketici refahının anahtarının antitröst yasaları değil, devletin piyasadan tamamen çekilmesi ve mülkiyet haklarının mutlak korunması olduğunu vazeder. Devlet müdahalesinin ortadan kalktığı bir düzende, tröstler ya sürekli verimlilik artışı sağlayarak (ki bu toplum için faydalıdır) hayatta kalacak ya da piyasanın rasyonel eleme mekanizması tarafından tasfiye edileceklerdir. Veri kaybı ve hesaplama hataları üzerinden yükselen her türlü kolektivist veya müdahaleci kaygı, serbest piyasanın öz-düzenleme kapasitesini ampirik olarak göz ardı etmektedir.
+
+================================================================================
+
+BAŞLIK: Katallaksi Çerçevesinde Rekabetin Keşif Süreci
+
+Katallaksi, rasyonel-ekonomik düzlemde, merkezi bir planlama olmaksızın, bireylerin farklı amaç ve bilgi setlerine sahip olduğu bir ortamda mübadele ve fiyat sinyalleri aracılığıyla oluşan kendiliğinden düzeni ifade eder. Friedrich Hayek’in literatüre kazandırdığı bu kavram, piyasayı statik bir denge durumu olarak değil, dinamik bir "keşif süreci" olarak tanımlar. Bu perspektiften bakıldığında rekabet, mevcut verilerin bir sonucu değil; hangi kaynakların nerede, nasıl ve kimin için en verimli şekilde kullanılacağına dair verilerin bizzat üretildiği bir mekanizmadır. Radikal liberteryen mülkiyet hakları ve Laissez-faire kapitalizmi çerçevesinde rekabet, girişimcilerin piyasadaki gizli fırsatları, değişen tüketici tercihlerini ve teknolojik imkanları keşfetmesini sağlayan yegane rasyonel araçtır.
 
 Ekonomik hesaplama teorisi, bilginin merkezi bir otorite tarafından toplanmasının ve işlenmesinin teknik imkansızlığını (knowledge problem) vurgular. Bilgi, toplumun geneline yayılmış, öznel, zamana ve mekana bağlı parçacıklar halindedir. Hiçbir merkezi planlama komisyonu veya bürokratik yapı, milyonlarca bireyin anlık ihtiyaçlarını, üretim maliyetlerini ve ikame mal tercihlerini tek bir veri setinde birleştiremez. Katallaksi ise, fiyat mekanizması aracılığıyla bu dağınık bilgiyi rasyonel birer sinyale dönüştürür. Rekabet süreci olmaksızın, bir malın veya hizmetin gerçek kıymetini belirlemek imkansızdır; zira fiyatlar, rekabetçi tekliflerin ve mülkiyet transferlerinin bir sonucudur. Kolektivist modellerin en büyük teknik hatası, rekabeti bir "israf" olarak görüp ortadan kaldırmaya çalışırken, aslında rasyonel ekonomik tercihler yapabilmek için ihtiyaç duydukları veri üretim mekanizmasını yok etmeleridir.
 
@@ -195,18 +81,13 @@ Rekabetin keşif süreci olduğu gerçeği, asgari ücret veya fiyat tavanı gib
 
 Verimlilik esasları üzerinden yapılan bir analizde, rekabetin sadece fiyat üzerinden değil, kalite, hizmet ve teknoloji üzerinden de bir keşif olduğu görülür. Tüketicilerin neyi tercih edeceğini önceden bilmek imkansızdır; bu ancak farklı seçeneklerin piyasada rekabet etmesiyle ortaya çıkar. Laissez-faire kapitalizmi, deneme-yanılma maliyetlerini bireylere yükleyerek, toplumsal ölçekte en verimli modellerin hayatta kalmasını sağlar. Kolektivist sistemlerde ise deneme-yanılma maliyeti tüm topluma yüklenir ve hatalı kararların geri dönüşü (siyasi engeller nedeniyle) çok daha zordur. Bu durum, serbest piyasanın neden sadece daha zengin değil, aynı zamanda daha dirençli ve adaptasyon kabiliyeti yüksek bir sistem olduğunu rasyonel olarak açıklar.
 
-Sonuç olarak, katallaksi çerçevesinde rekabet, toplumun sınırlı kaynaklarını en üst düzeyde tatmin sağlayacak şekilde organize etmenin tek rasyonel yoludur. Bu süreç, statik bir matematiksel model değil, insan eyleminin (human action) yarattığı sürekli bir akıştır. Devletin bu akışa yaptığı her müdahale, bir mülkiyet hakkı ihlali olmasının yanı sıra, rasyonel bir ekonominin ihtiyaç duyduğu bilginin üretimini engelleyen teknik bir sabotajdır. Ampirik başarılar, serbest piyasanın keşif kapasitesinin, hiçbir planlama otoritesinin hayal edemeyeceği seviyede kompleks bir düzen kurabildiğini kanıtlamıştır. Gerçek ekonomik ilerleme, bu keşif sürecinin önündeki tüm siyasi ve bürokratik engellerin kaldırılmasıyla mümkündür.`
-  },
-  {
-    id: 6,
-    categoryId: 'hukuk',
-    subcategoryId: 'mulkiyet-haklari',
-    authorId: 'yz-yazilari',
-    title: 'Mülkiyet Hakları ve Doğal Tekel Mitolojisi',
-    excerpt: '"Doğal tekel" argümanının rasyonel-ekonomik eleştirisi: Ölçek ekonomileri, piyasa girişi engelleri ve devlet imtiyazlarıyla yaratılan siyasi tekellerin mülkiyet hakları perspektifinden dekonstrüksiyonu.',
-    date: '14 Nisan 2026',
-    commentsCount: 42,
-    content: `"Doğal tekel" kavramı, müdahaleci ekonomi literatüründe, belirli endüstrilerin (su, elektrik, demiryolu gibi altyapı hizmetleri) yüksek sabit maliyetler ve ölçek ekonomileri nedeniyle kaçınılmaz olarak tek bir firma tarafından yönetilmesi gerektiğini savunan teknik bir kurgudur. Ancak rasyonel-ekonomik perspektif ve radikal liberteryen mülkiyet hakları çerçevesinde yapılan bir analiz, bu kavramın ampirik dayanaktan yoksun bir "mitoloji" olduğunu ve asıl amacının devletin piyasaya müdahalesini meşrulaştırmak olduğunu ortaya koyar. Ekonomik verimlilik esasları, serbest piyasada hiçbir yapının, devletin zor kullanma tekeli (franchise hakları, lisanslama, münhasır imtiyazlar) olmaksızın rekabetten muaf kalamayacağını kanıtlamaktadır. "Doğal tekel" olarak yaftalanan sektörler, aslında devlet müdahalesinin rekabeti yasal yollarla engellediği "siyasi tekel" alanlarıdır.
+Sonuç olarak, katallaksi çerçevesinde rekabet, toplumun sınırlı kaynaklarını en üst düzeyde tatmin sağlayacak şekilde organize etmenin tek rasyonel yoludur. Bu süreç, statik bir matematiksel model değil, insan eyleminin (human action) yarattığı sürekli bir akıştır. Devletin bu akışa yaptığı her müdahale, bir mülkiyet hakkı ihlali olmasının yanı sıra, rasyonel bir ekonominin ihtiyaç duyduğu bilginin üretimini engelleyen teknik bir sabotajdır. Ampirik başarılar, serbest piyasanın keşif kapasitesinin, hiçbir planlama otoritesinin hayal edemeyeceği seviyede kompleks bir düzen kurabildiğini kanıtlamıştır. Gerçek ekonomik ilerleme, bu keşif sürecinin önündeki tüm siyasi ve bürokratik engellerin kaldırılmasıyla mümkündür.
+
+================================================================================
+
+BAŞLIK: Mülkiyet Hakları ve Doğal Tekel Mitolojisi
+
+"Doğal tekel" kavramı, müdahaleci ekonomi literatüründe, belirli endüstrilerin (su, elektrik, demiryolu gibi altyapı hizmetleri) yüksek sabit maliyetler ve ölçek ekonomileri nedeniyle kaçınılmaz olarak tek bir firma tarafından yönetilmesi gerektiğini savunan teknik bir kurgudur. Ancak rasyonel-ekonomik perspektif ve radikal liberteryen mülkiyet hakları çerçevesinde yapılan bir analiz, bu kavramın ampirik dayanaktan yoksun bir "mitoloji" olduğunu ve asıl amacının devletin piyasaya müdahalesini meşrulaştırmak olduğunu ortaya koyar. Ekonomik verimlilik esasları, serbest piyasada hiçbir yapının, devletin zor kullanma tekeli (franchise hakları, lisanslama, münhasır imtiyazlar) olmaksızın rekabetten muaf kalamayacağını kanıtlamaktadır. "Doğal tekel" olarak yaftalanan sektörler, aslında devlet müdahalesinin rekabeti yasal yollarla engellediği "siyasi tekel" alanlarıdır.
 
 Ekonomik hesaplama teorisi açısından, bir sektörün "doğal tekel" olduğu iddiasıyla devlet tarafından regüle edilmesi veya kamulaştırılması, o sektördeki rasyonel fiyat sinyallerinin imhası anlamına gelir. Kamu eliyle yönetilen veya regüle edilen tekellerde, sermaye tahsisi kâr-zarar testine tabi değildir; bu da kaynakların verimsiz kullanımına ve "ölçek ekonomisizliği" (diseconomies of scale) nedeniyle işlem maliyetlerinin artmasına yol açar. Regülasyonlar, piyasaya giriş maliyetlerini yapay olarak yükselterek potansiyel rakiplerin keşif sürecini felç eder. Ampirik veriler, 19. yüzyılın sonu ve 20. yüzyılın başında, elektrik ve gaz gibi sektörlerde devlet müdahalesi öncesinde birden fazla firmanın aynı coğrafyada rekabet ettiğini, ancak bu rekabetin verimliliği artırmasından çekinen yerleşik aktörlerin devletten "münhasır haklar" talep ederek rekabeti yasaklattığını göstermektedir. Dolayısıyla tekel, piyasanın bir hatası değil, devletin mülkiyet haklarını ihlal ederek yarattığı siyasi bir çıktıdır.
 
@@ -214,18 +95,13 @@ Piyasanın "yarışılabilirlik" (contestability) özelliği, devlet imtiyazı o
 
 Radikal liberteryen mülkiyet hakları perspektifinden, devletin "anti-tröst" yasaları veya "doğal tekel" regülasyonları, mülk sahiplerinin kendi varlıkları üzerindeki tasarruf yetkisini gasp eden birer şiddet eylemidir. Verimli bir işletmenin ölçek ekonomisinden faydalanarak pazar payını artırması, tüketicilerin o işletmenin sunduğu marjinal faydayı diğerlerine tercih ettiğini gösteren rasyonel bir veridir. Bu başarıyı "tekelleşme" olarak cezalandırmak, ekonomik rasyonaliteyi ve sermaye birikimini sabote etmektir. Tarihsel-istatistiksel incelemeler, devletin "kamu yararı" adına müdahale ettiği her tekelin, serbest piyasadaki muadillerine göre daha yüksek maliyetli, daha az inovatif ve daha düşük kaliteli hizmet sunduğunu doğrulamaktadır.
 
-Sonuç olarak, doğal tekel teorisi, serbest piyasanın kendi kendini düzenleyen katallaktik yapısını göz ardı eden ve rasyonel hesaplama imkanlarını daraltan kolektivist bir yanılsamadır. Gerçek ekonomik özgürlük ve verimlilik, tüm sektörlerin (altyapı dahil) devlet imtiyazlarından arındırılması ve mülkiyet haklarının radikal bir biçimde korunmasıyla mümkündür. Devletin "tekel bozucu" maskesi altında bizzat tekel yaratıcısı olduğu gerçeği, piyasa sinyallerinin serbest bırakılmasıyla teknik olarak aşılabilir. Laissez-faire kapitalizmi altında, hiçbir yapı tüketicinin subjektif değer yargılarına ve rakiplerin teknolojik ataklarına karşı korunaklı değildir; bu dinamizm, toplumsal refahı maksimize eden yegane rasyonel motor sistemidir.`
-  },
-  {
-    id: 1,
-    categoryId: 'felsefe',
-    subcategoryId: 'etik',
-    authorId: 'yz-yazilari',
-    title: 'Değerin Subjektif Teorisi ve Marjinal Fayda',
-    excerpt: 'Emek-değer teorisinin mantıksal iflası ve marjinal fayda devrimi: Değerin öznel doğası, Adam Smith’in su-elmas paradoksunun çözümü ve rasyonel ekonomik hesaplamanın subjektif temelleri üzerine teknik bir inceleme.',
-    date: '14 Nisan 2026',
-    commentsCount: 24,
-    content: `Değerin subjektifliği ve marjinal fayda teorisi, rasyonel-ekonomik analizin temel taşını oluştururken, aynı zamanda Klasik Ekonomi’nin ve özellikle Marksist "Emek-Değer Teorisi"nin teknik ve mantıksal iflasını kanıtlayan en güçlü enstrümanlardır. Değer, nesnelerin özünde bulunan fiziksel bir özellik veya bir malın üretimi için harcanan "toplumsal olarak gerekli emek zamanı" değildir. Aksine değer, değerlendirmeyi yapan bireyin zihninde oluşan, tamamen öznel ve hiyerarşik bir tercih sıralamasının sonucudur. Carl Menger, Eugen von Böhm-Bawerk ve daha sonra Ludwig von Mises tarafından rafine edilen bu teori; piyasa fiyatlarının oluşumunu, sermaye tahsisini ve ekonomik verimliliği açıklayan tek tutarlı modeldir.
+Sonuç olarak, doğal tekel teorisi, serbest piyasanın kendi kendini düzenleyen katallaktik yapısını göz ardı eden ve rasyonel hesaplama imkanlarını daraltan kolektivist bir yanılsamadır. Gerçek ekonomik özgürlük ve verimlilik, tüm sektörlerin (altyapı dahil) devlet imtiyazlarından arındırılması ve mülkiyet haklarının radikal bir biçimde korunmasıyla mümkündür. Devletin "tekel bozucu" maskesi altında bizzat tekel yaratıcısı olduğu gerçeği, piyasa sinyallerinin serbest bırakılmasıyla teknik olarak aşılabilir. Laissez-faire kapitalizmi altında, hiçbir yapı tüketicinin subjektif değer yargılarına ve rakiplerin teknolojik ataklarına karşı korunaklı değildir; bu dinamizm, toplumsal refahı maksimize eden yegane rasyonel motor sistemidir.
+
+================================================================================
+
+BAŞLIK: Değerin Subjektif Teorisi ve Marjinal Fayda
+
+Değerin subjektifliği ve marjinal fayda teorisi, rasyonel-ekonomik analizin temel taşını oluştururken, aynı zamanda Klasik Ekonomi’nin ve özellikle Marksist "Emek-Değer Teorisi"nin teknik ve mantıksal iflasını kanıtlayan en güçlü enstrümanlardır. Değer, nesnelerin özünde bulunan fiziksel bir özellik veya bir malın üretimi için harcanan "toplumsal olarak gerekli emek zamanı" değildir. Aksine değer, değerlendirmeyi yapan bireyin zihninde oluşan, tamamen öznel ve hiyerarşik bir tercih sıralamasının sonucudur. Carl Menger, Eugen von Böhm-Bawerk ve daha sonra Ludwig von Mises tarafından rafine edilen bu teori; piyasa fiyatlarının oluşumunu, sermaye tahsisini ve ekonomik verimliliği açıklayan tek tutarlı modeldir.
 
 Ekonomik eylem, özü itibarıyla bir seçim yapmaktır ve her seçim, vazgeçilen bir alternatifi (fırsat maliyeti) içerir. Değerin subjektif doğası, bireylerin farklı ihtiyaçlara, önceliklere ve zaman tercihlerine sahip olduğu gerçeğine dayanır. Bu bağlamda, bir malın "objektif" bir değeri olduğu iddiası, rasyonel veri analiziyle çelişir. Örneğin, bir bardak suyun değeri, bireyin bulunduğu konjonktüre göre radikal bir değişim gösterir: Modern bir kentte musluk başında oturan bir aktör için suyun marjinal faydası sıfıra yakındır ve temizlik gibi düşük öncelikli amaçlar için kullanılır. Ancak aynı su, dehidrasyon tehlikesi altındaki bir çöl yolcusu için yaşamla ölüm arasındaki farkı temsil eder. Buradaki değer farkı, suyun kimyasal bileşiminden veya elde edilme maliyetinden değil, aktörün o spesifik birime atfettiği subjektif önemden kaynaklanmaktadır.
 
@@ -237,18 +113,13 @@ Ekonomik hesaplama teorisi açısından bakıldığında, subjektif değerlerin 
 
 Radikal liberteryen mülkiyet hakları ve Laissez-faire perspektifi, subjektif değer teorisinin toplumsal barış ve refah için en uyumlu sistem olduğunu savunur. Eğer değer subjektifse, bir otoritenin (devlet) neyin "değerli" veya "toplum için yararlı" olduğuna karar vermesi rasyonel olarak imkansızdır. Asgari ücret uygulamaları veya devlet sübvansiyonları, bireylerin subjektif tercih hiyerarşilerini şiddet zoruyla bozmakta ve kaynakları yapay olarak daha az değerli alanlara kaydırmaktadır. Bir mülk sahibinin kendi varlıklarını nasıl kullanacağı, onun subjektif marjinal fayda maksimizasyonu ile ilgilidir ve bu süreç, gönüllü mübadeleler yoluyla tüm aktörlerin refahını (kendi subjektif ölçütlerine göre) artırır. Piyasa, farklı değer yargılarına sahip insanların çatışmadan, karşılıklı rızaya dayalı değişimle koordinasyon sağladığı bir katallaksidir.
 
-Sonuç olarak, değerin subjektifliği ve marjinal fayda yasası, ekonomiyi bir mühendislik problemi olmaktan çıkarıp bir "insan eylemi" bilimi haline verir. Emeğin veya ham maddenin kendi başına bir kutsiyeti veya objektif karşılığı yoktur; ekonomik rasyonalite, sadece tüketicinin son birim ürüne atfettiği değerle ölçülür. Müdahaleci ve kolektivist sistemler, bu temel yasayı ihlal ettikleri ölçüde verimlilikten uzaklaşmakta ve hesaplanamaz bir kaosa sürüklenmektedir. Laissez-faire kapitalizmi ise, subjektif değerlerin özgürce sergilendiği ve en verimli şekilde fiyatlandığı yegane sistem olarak, rasyonel-ekonomik analizin ulaştığı en üst mertebedir.`
-  },
-  {
-    id: 7,
-    categoryId: 'siyaset',
-    subcategoryId: 'devlet-teorisi',
-    authorId: 'yz-yazilari',
-    title: 'Devletin Kökeni: Yırtıcı Kuram vs. Toplum Sözleşmesi',
-    excerpt: 'Mülkiyet haklarının ve rasyonel-ekonomik analizin ışığında devletin doğası: Toplum sözleşmesi mitinin eleştirisi ve yerleşik haydut olarak devletin praksiyolojik temelleri.',
-    date: '14 Nisan 2026',
-    commentsCount: 18,
-    content: `Devletin kökenine dair rasyonel-ekonomik bir analiz, kurumsal yapıların meşruiyet iddialarından ziyade, bu yapıların kaynak tahsisi, mülkiyet hakları ve işlem maliyetleri üzerindeki etkilerine odaklanmayı gerektirir. Siyaset biliminde ve ekonomi politiğinde "Toplum Sözleşmesi" ve "Yırtıcı Kuram" (Predatory Theory) olarak kristalleşen iki ana yaklaşım, devletin varlık nedenini ampirik ve teorik düzlemlerde karşı karşıya getirir. Birincil kimlik olarak rasyonel-ekonomik perspektif ve radikal liberteryen mülkiyet hakları benimsendiğinde; devletin, bireylerin güvenlik ihtiyaçlarını karşılamak üzere gönüllü olarak kurguladıkları bir "hizmet sağlayıcı" olduğu iddiası (Toplum Sözleşmesi), rasyonel hesaplama ve sözleşme hukuku verileriyle çelişmektedir. Buna karşın, devletin bir coğrafya üzerindeki şiddet tekelini elinde tutan ve kaynakları cebri yöntemlerle transfer eden bir "yerleşik haydut" olduğu tezi (Yırtıcı Kuram), tarihsel-istatistiksel verilerle daha uyumlu bir model sunmaktadır.
+Sonuç olarak, değerin subjektifliği ve marjinal fayda yasası, ekonomiyi bir mühendislik problemi olmaktan çıkarıp bir "insan eylemi" bilimi haline verir. Emeğin veya ham maddenin kendi başına bir kutsiyeti veya objektif karşılığı yoktur; ekonomik rasyonalite, sadece tüketicinin son birim ürüne atfettiği değerle ölçülür. Müdahaleci ve kolektivist sistemler, bu temel yasayı ihlal ettikleri ölçüde verimlilikten uzaklaşmakta ve hesaplanamaz bir kaosa sürüklenmektedir. Laissez-faire kapitalizmi ise, subjektif değerlerin özgürce sergilendiği ve en verimli şekilde fiyatlandığı yegane sistem olarak, rasyonel-ekonomik analizin ulaştığı en üst mertebedir.
+
+================================================================================
+
+BAŞLIK: Devletin Kökeni: Yırtıcı Kuram vs. Toplum Sözleşmesi
+
+Devletin kökenine dair rasyonel-ekonomik bir analiz, kurumsal yapıların meşruiyet iddialarından ziyade, bu yapıların kaynak tahsisi, mülkiyet hakları ve işlem maliyetleri üzerindeki etkilerine odaklanmayı gerektirir. Siyaset biliminde ve ekonomi politiğinde "Toplum Sözleşmesi" ve "Yırtıcı Kuram" (Predatory Theory) olarak kristalleşen iki ana yaklaşım, devletin varlık nedenini ampirik ve teorik düzlemlerde karşı karşıya getirir. Birincil kimlik olarak rasyonel-ekonomik perspektif ve radikal liberteryen mülkiyet hakları benimsendiğinde; devletin, bireylerin güvenlik ihtiyaçlarını karşılamak üzere gönüllü olarak kurguladıkları bir "hizmet sağlayıcı" olduğu iddiası (Toplum Sözleşmesi), rasyonel hesaplama ve sözleşme hukuku verileriyle çelişmektedir. Buna karşın, devletin bir coğrafya üzerindeki şiddet tekelini elinde tutan ve kaynakları cebri yöntemlerle transfer eden bir "yerleşik haydut" olduğu tezi (Yırtıcı Kuram), tarihsel-istatistiksel verilerle daha uyumlu bir model sunmaktadır.
 
 Toplum Sözleşmesi teorisi, Hobbes, Locke ve Rousseau gibi düşünürler tarafından temellendirilmiş olup, devletin "doğa durumu"ndaki belirsizliği ve yüksek işlem maliyetlerini minimize etmek amacıyla kurulduğunu öne sürer. Ancak ekonomik bir perspektiften bakıldığında, bir sözleşmenin geçerliliği için tarafların açık rızası, karşılıklı borç yüklenimi ve fesih hakkı gibi temel hukuki unsurlar gereklidir. Ampirik veriler, tarihin hiçbir döneminde bireylerin devletle böyle bir mülkiyet ve hizmet sözleşmesi imzalamadığını göstermektedir. Dolayısıyla, "zımni rıza" (tacit consent) gibi kavramlar, mülkiyet haklarının korunması ilkesiyle rasyonel bir temelde bağdaşmaz. Ekonomik hesaplama teorisi açısından, bir tekel olarak devletin, rekabetin olmadığı bir ortamda hizmet kalitesini optimize etmesi veya fiyatlandırmayı (vergilendirme) piyasa dengesine göre yapması teknik olarak imkansızdır. Toplum sözleşmesi, bu bağlamda, verimsiz bir tekelin meşrulaştırılması için kullanılan normatif bir kurgu olarak değerlendirilmelidir.
 
@@ -262,18 +133,13 @@ Tarihsel-istatistiksel bir perspektifle, 19. yüzyılın sonundaki klasik libera
 
 Radikal liberteryen mülkiyet teorisi çerçevesinde, devletin her türlü eylemi özünde bir mülkiyet ihlalidir. Murray Rothbard’ın vurguladığı gibi, devlet "hukukun üstünlüğü" maskesi altında hukuku ihlal eden tek organizasyondur. Toplum sözleşmesi tezi, bu ihlali estetik bir örtüyle gizlemeye çalışırken; yırtıcı kuram, devletin gerçek doğasını teknik bir netlikle ortaya koyar. Modern ulus devletlerin yükselişi, aslında savaş teknolojilerindeki gelişme ve bu teknolojiyi finanse etmek için geliştirilen sofistike vergilendirme tekniklerinin bir sonucudur. Bugün "sosyal haklar" olarak adlandırılan birçok unsur, aslında bireylerin kendi mülkiyetleri üzerindeki kontrolünü zayıflatan ve onları merkezi otoriteye bağımlı kılan verimlilik karşıtı mekanizmalardır.
 
-Sonuç olarak, devletin kökenine dair rasyonel-ekonomik inceleme, "Toplum Sözleşmesi" modelinin ampirik dayanaktan yoksun bir meşrulaştırma aracı olduğunu; "Yırtıcı Kuram"ın ise devletin işleyiş mantığını, vergi toplama süreçlerini ve şiddet tekelini açıklayan rasyonel bir model sunduğunu ortaya koyar. Verimlilik esaslı bir yaklaşım, devlet müdahalesinin olmadığı, mülkiyet haklarının mutlak olduğu ve tüm hizmetlerin serbest piyasa tarafından rekabetçi bir ortamda sunulduğu Laissez-faire sisteminin, toplumsal refahı maksimize edecek tek tutarlı yapı olduğunu gösterir. Devlet, bir çözüm ortağı değil, işlem maliyetlerini artıran ve ekonomik hesaplamayı bozan dışsal bir parazittir. Gelecekteki kurumsal dönüşümler, bu yırtıcı yapının tasfiyesi ve kaynakların rasyonel piyasa aktörlerine iadesi üzerinden kurgulanmalıdır.`
-  },
-  {
-    id: 2,
-    categoryId: 'felsefe',
-    subcategoryId: 'bilgi-felsefesi',
-    authorId: 'yz-yazilari',
-    title: 'Spontane Düzen ve Metodolojik Bireycilik',
-    excerpt: 'Kendiliğinden düzen (spontaneous order) ve katallaktik süreçler, karmaşık toplumsal yapıların merkezi bir irade veya tasarı olmaksızın nasıl evrildiğini açıklayan en rafine modeldir.',
-    date: '14 Nisan 2026',
-    commentsCount: 56,
-    content: `Kendiliğinden düzen (spontaneous order) ve katallaktik süreçler, karmaşık toplumsal yapıların merkezi bir irade veya tasarı olmaksızın, bireylerin kendi amaçları doğrultusunda hareket etmeleri sonucunda nasıl evrildiğini açıklayan en rafine modeldir. İskoç Aydınlanması düşünürlerinden (Adam Ferguson ve Adam Smith) Friedrich Hayek’e uzanan bu gelenek, toplumun "insan eyleminin sonucu olduğu ancak insan tasarımının sonucu olmadığı" (the result of human action but not of human design) gerçeğini rasyonel-ekonomik bir temele oturtur. Laissez-faire kapitalizmi ve radikal liberteryen mülkiyet hakları, bu kendiliğinden düzenin serpilmesi için gereken yegane hukuksal ve ekonomik zemini sağlar.
+Sonuç olarak, devletin kökenine dair rasyonel-ekonomik inceleme, "Toplum Sözleşmesi" modelinin ampirik dayanaktan yoksun bir meşrulaştırma aracı olduğunu; "Yırtıcı Kuram"ın ise devletin işleyiş mantığını, vergi toplama süreçlerini ve şiddet tekelini açıklayan rasyonel bir model sunduğunu ortaya koyar. Verimlilik esaslı bir yaklaşım, devlet müdahalesinin olmadığı, mülkiyet haklarının mutlak olduğu ve tüm hizmetlerin serbest piyasa tarafından rekabetçi bir ortamda sunulduğu Laissez-faire sisteminin, toplumsal refahı maksimize edecek tek tutarlı yapı olduğunu gösterir. Devlet, bir çözüm ortağı değil, işlem maliyetlerini artıran ve ekonomik hesaplamayı bozan dışsal bir parazittir. Gelecekteki kurumsal dönüşümler, bu yırtıcı yapının tasfiyesi ve kaynakların rasyonel piyasa aktörlerine iadesi üzerinden kurgulanmalıdır.
+
+================================================================================
+
+BAŞLIK: Spontane Düzen ve Metodolojik Bireycilik
+
+Kendiliğinden düzen (spontaneous order) ve katallaktik süreçler, karmaşık toplumsal yapıların merkezi bir irade veya tasarı olmaksızın, bireylerin kendi amaçları doğrultusunda hareket etmeleri sonucunda nasıl evrildiğini açıklayan en rafine modeldir. İskoç Aydınlanması düşünürlerinden (Adam Ferguson ve Adam Smith) Friedrich Hayek’e uzanan bu gelenek, toplumun "insan eyleminin sonucu olduğu ancak insan tasarımının sonucu olmadığı" (the result of human action but not of human design) gerçeğini rasyonel-ekonomik bir temele oturtur. Laissez-faire kapitalizmi ve radikal liberteryen mülkiyet hakları, bu kendiliğinden düzenin serpilmesi için gereken yegane hukuksal ve ekonomik zemini sağlar.
 
 Kendiliğinden düzenin en temel örneği dildir. Hiçbir akademi veya üst kurul dili icat etmemiş, gramer kurallarını önceden belirlememiştir. Dil, milyonlarca insanın iletişim kurma ihtiyacıyla gerçekleştirdiği milyarlarca etkileşimin sonucunda, yüzyıllara yayılan bir deneme-yanılma süreciyle "kendiliğinden" evrilmiştir. Benzer şekilde, hukuk ve para da merkezi bir otorite tarafından tepeden inme dayatılmadan önce, piyasa aktörlerinin güven ve mübadele ihtiyacını karşılamak üzere geliştirdikleri spontane kurumlardır. Ekonomik bir perspektiften bakıldığında, piyasa düzeni (katallaksi), hiçbir dehanın veya süper bilgisayarın tasarlayamayacağı kadar kompleks bir bilgi işleme kapasitesine sahiptir; zira bu düzen, tüm aktörlerin yerel ve öznel bilgilerini fiyat sinyalleri aracılığıyla koordine eder.
 
@@ -285,18 +151,13 @@ Zaman ve mekan bilgisi (knowledge of time and place), spontane düzenin rasyonel
 
 Laissez-faire ekonomisinde mülkiyet haklarının mutlak korunması, bu kendiliğinden düzenin "trafik kuralları" gibidir. Herkesin kendi sınırlarını bilmesi ve mülkiyetine saygı duyulması, milyarlarca insanın birbirinin amacını bilmeden barışçıl ve verimli bir şekilde iş birliği yapmasını sağlar. Müdahaleci sistemlerde ise kurallar sürekli değiştiği ve mülkiyet güvenliği sarsıldığı için aktörlerin ileriye dönük rasyonel plan yapması (ekonomik hesaplama) zorlaşır. Tarihsel-istatistiksel incelemeler, serbest piyasa ekonomilerinin adaptasyon hızının, krizlere karşı direncinin ve kaynak yaratma kapasitesinin, hiçbir komuta ekonomisiyle kıyaslanamayacak kadar üstün olduğunu kanıtlamıştır.
 
-Sonuç olarak, kendiliğinden düzen ve katallaksi, toplumsal refahın ve bireysel özgürlüğün biricik garantisidir. Bir orman nasıl planlanmadan bir ekosistem olarak hayatta kalıyor ve evriliyorsa, beşeri toplumlar da mülkiyet haklarının mutlak olduğu bir özgürlük ortamında en verimli ve rasyonel formuna ulaşır. Devletin "düzen kurma" iddiasıyla yaptığı her müdahale, aslında mevcut doğal düzenin dokusunu bozan ve rasyonelliği imkansız kılan yıkıcı bir eylemdir. Gelecek, yapay planlamanın tasfiyesi ve insanoğlunun spontane gelişim kapasitesine duyulan güven üzerine inşa edilmelidir.`
-  },
-  {
-    id: 3,
-    categoryId: 'hukuk',
-    subcategoryId: 'hukuk-teorisi',
-    authorId: 'yz-yazilari',
-    title: 'Bilgi Dağılımı ve Merkeziyetçi Hesaplama Sorunu',
-    excerpt: 'Friedrich Hayek’in bilgi problemi ve Ludwig von Mises’in ekonomik hesaplama sorunu ışığında merkezi planlamanın teknik imkansızlığı: Fiyat sinyalleri, örtük bilgi ve mülkiyet haklarının rasyonel veri koordinasyonu üzerindeki hayati rolü.',
-    date: '14 Nisan 2026',
-    commentsCount: 12,
-    content: `Ekonomik rasyonellik ve verimlilik esasları çerçevesinde, modern toplumların karşılaştığı en temel teknik engel, bilginin doğası ile merkezi yönetimlerin bu bilgiyi işleme kapasitesi arasındaki aşılmaz uyumsuzluktur. Bilgi, homojen, istatistiksel ve tek bir merkezde toplanabilir bir veri seti değildir; aksine toplumun geneline yayılmış, parçalı, öznel ve çoğu zaman sadece belirli bir zaman ve mekana (knowledge of time and place) özgü "örtük" (tacit) bir yapıdadır. Friedrich Hayek’in "bilgi sorunu" (knowledge problem) olarak tanımladığı bu epistemolojik gerçeklik, merkeziyetçi bir planlama otoritesinin rasyonel bir sermaye tahsisi yapmasını teknik olarak imkansız kılar. Laissez-faire kapitalizmi ve serbest piyasa ekonomisi, bu dağınık bilgiyi fiyat sinyalleri aracılığıyla koordine eden yegane sistemdir. Fiyatlar, milyonlarca aktörün subjektif değer yargılarını, yerel kıtlık koşullarını ve üretim maliyetlerini tek bir sayısal veriye sıkıştıran devasa bir telekomünikasyon şebekesi gibi işlev görür. Bu sinyal mekanizmasının devlet müdahalesiyle bozulması, sistemde rasyonel veri kaybına ve kaçınılmaz bir ekonomik körlüğe yol açar.
+Sonuç olarak, kendiliğinden düzen ve katallaksi, toplumsal refahın ve bireysel özgürlüğün biricik garantisidir. Bir orman nasıl planlanmadan bir ekosistem olarak hayatta kalıyor ve evriliyorsa, beşeri toplumlar da mülkiyet haklarının mutlak olduğu bir özgürlük ortamında en verimli ve rasyonel formuna ulaşır. Devletin "düzen kurma" iddiasıyla yaptığı her müdahale, aslında mevcut doğal düzenin dokusunu bozan ve rasyonelliği imkansız kılan yıkıcı bir eylemdir. Gelecek, yapay planlamanın tasfiyesi ve insanoğlunun spontane gelişim kapasitesine duyulan güven üzerine inşa edilmelidir.
+
+================================================================================
+
+BAŞLIK: Bilgi Dağılımı ve Merkeziyetçi Hesaplama Sorunu
+
+Ekonomik rasyonellik ve verimlilik esasları çerçevesinde, modern toplumların karşılaştığı en temel teknik engel, bilginin doğası ile merkezi yönetimlerin bu bilgiyi işleme kapasitesi arasındaki aşılmaz uyumsuzluktur. Bilgi, homojen, istatistiksel ve tek bir merkezde toplanabilir bir veri seti değildir; aksine toplumun geneline yayılmış, parçalı, öznel ve çoğu zaman sadece belirli bir zaman ve mekana (knowledge of time and place) özgü "örtük" (tacit) bir yapıdadır. Friedrich Hayek’in "bilgi sorunu" (knowledge problem) olarak tanımladığı bu epistemolojik gerçeklik, merkeziyetçi bir planlama otoritesinin rasyonel bir sermaye tahsisi yapmasını teknik olarak imkansız kılar. Laissez-faire kapitalizmi ve serbest piyasa ekonomisi, bu dağınık bilgiyi fiyat sinyalleri aracılığıyla koordine eden yegane sistemdir. Fiyatlar, milyonlarca aktörün subjektif değer yargılarını, yerel kıtlık koşullarını ve üretim maliyetlerini tek bir sayısal veriye sıkıştıran devasa bir telekomünikasyon şebekesi gibi işlev görür. Bu sinyal mekanizmasının devlet müdahalesiyle bozulması, sistemde rasyonel veri kaybına ve kaçınılmaz bir ekonomik körlüğe yol açar.
 
 Merkeziyetçi hesaplama sorununun teknik özü, Ludwig von Mises’in 1920’de ortaya koyduğu üzere, üretim araçları üzerindeki özel mülkiyetin yokluğunda rasyonel fiyatlamanın yapılamamasıdır. Bir ekonomide sermaye malları (hammadde, makine, toprak) için rekabetçi bir piyasa ve mübadele yoksa, bu malların objektif bir para fiyatı oluşamaz. Fiyatların olmadığı bir ortamda ise, bir yatırımın kârlı mı yoksa kaynak israfı mı olduğunu belirleyecek rasyonel bir "kâr-zarar" hesabı yapmak mümkün değildir. Kolektivist modeller, üretimi "ihtiyaca göre" veya "teknik katsayılara göre" planlamaya çalışırken, aslında iktisadi rasyonalitenin temelini oluşturan ekonomik hesaplamayı ortadan kaldırırlar. Bu durum, merkezi planlamacıların hangi üretim yönteminin daha az maliyetli olduğunu veya hangi kaynağın hangi amaç için daha verimli kullanılacağını bilmesini engeller. Sonuç, ampirik olarak Sovyet tipi ekonomilerde gözlemlendiği gibi, bir yandan belirli ürünlerde devasa stok birikimleri (malinvestment), diğer yandan en temel tüketim maddelerinde kronik kıtlıklar ve sistemik bir fakirleşmedir.
 
@@ -306,18 +167,13 @@ Tarihsel-istatistiksel veriler, merkeziyetçi hesaplama denemelerinin her zaman 
 
 Radikal liberteryen mülkiyet hakları çerçevesinde, devletin her türlü müdahalesi bir "epistemolojik şiddet" eylemidir. Vergilendirme, regülasyon ve para basımı gibi müdahaleler, piyasadaki doğal mülkiyet transferlerini ve dolayısıyla gerçek fiyat oluşumlarını engeller. Enflasyon (para arzının artırılması), fiyat sinyallerini en çok bozan unsurlardan biridir; zira sermaye sahiplerine yapay bir talep artışı sinyali göndererek onları sürdürülemez yatırımlara sürükler (Business Cycle Theory). Bu yapay patlamaların ardından gelen ekonomik krizler, aslında piyasanın merkeziyetçi hataları temizleme ve rasyonel fiyat dengesine dönme çabasıdır. Verimlilik esaslı bir analiz, ekonomik istikrarın ve büyümenin anahtarının "akıllı planlama" değil, mülkiyetin korunması ve fiyat mekanizmasına müdahale edilmemesi olduğunu vazeder. Bilgi, sadece özgür bireylerin rekabetçi eylemleriyle keşfedilebilir; bu keşif sürecini merkezi bir otoriteye devretmek, rasyonel bir ekonominin tüm veri tabanını imha etmekle eşdeğerdir.
 
-Sonuç olarak, merkeziyetçi hesaplama sorunu, kolektivist ve müdahaleci politikaların neden her zaman başarısızlığa mahkum olduğunun teknik ve mantıksal açıklamasıdır. Toplumun toplam bilgisi, hiçbir süper bilgisayarın veya bürokratik heyetin erişemeyeceği kadar karmaşıktır. Bu bilgiyi koordine edebilecek tek mekanizma, mülkiyet haklarına dayalı serbest piyasa ve onun yarattığı fiyat sistemidir. Laissez-faire kapitalizmi, sadece ekonomik bir tercih değil, bilginin doğasına uygun olan tek rasyonel organizasyon biçimidir. Devlet müdahalesinin her bir birimi, piyasadaki bilgi akışını bozan, verimliliği düşüren ve kaynak tahsisinde rasyonel olmayan sonuçlar üreten bir sistem hatasıdır. Gerçek ilerleme, merkeziyetçi kontrolün tasfiyesi ve kararların, o kararların sonuçlarına katlanan mülkiyet sahibi rasyonel aktörlere bırakılmasıyla mümkündür.`
-  },
-  {
-    id: 9,
-    categoryId: 'siyaset',
-    subcategoryId: 'devlet-teorisi',
-    authorId: 'yz-yazilari',
-    title: 'Tambov Ayaklanması: Bolşevik Terörü ve Bir Halkın Çöküşü',
-    excerpt: 'Sovyet tarihinin en kanlı sayfalarından biri: Savaş Komünizmi, zehirli gaz saldırıları ve Tambov köylülerinin trajik direnişi üzerine eleştirel bir inceleme.',
-    date: '14 Nisan 2026',
-    commentsCount: 0,
-    content: `Tambov Ayaklanması veya köylülerin deyimiyle "Antonovşçina", Sovyet tarihinin en kanlı ve en trajik sayfalarından biri olarak modern tarih yazımında yerini almaktadır. 1920-1921 yılları arasında Rusya’nın Tambov bölgesinde patlak veren bu devasa isyan, Bolşevik iktidarının "Savaş Komünizmi" politikalarına karşı bir halk patlaması gibi görünse de, hem isyancıların stratejik hataları hem de Sovyet devletinin uyguladığı eşi benzeri görülmemiş şiddet sarmalı bakımından derinlemesine incelenmeyi hak etmektedir. Bu yazı, Tambov Ayaklanması’nı askeri ve siyasi bir başarısızlık olarak eleştirirken, aynı zamanda bu isyanı bastırmak adına Komünist yönetimin başvurduğu sistematik katliamları ve insanlık dışı yöntemleri detaylandıracaktır.
+Sonuç olarak, merkeziyetçi hesaplama sorunu, kolektivist ve müdahaleci politikaların neden her zaman başarısızlığa mahkum olduğunun teknik ve mantıksal açıklamasıdır. Toplumun toplam bilgisi, hiçbir süper bilgisayarın veya bürokratik heyetin erişemeyeceği kadar karmaşıktır. Bu bilgiyi koordine edebilecek tek mekanizma, mülkiyet haklarına dayalı serbest piyasa ve onun yarattığı fiyat sistemidir. Laissez-faire kapitalizmi, sadece ekonomik bir tercih değil, bilginin doğasına uygun olan tek rasyonel organizasyon biçimidir. Devlet müdahalesinin her bir birimi, piyasadaki bilgi akışını bozan, verimliliği düşüren ve kaynak tahsisinde rasyonel olmayan sonuçlar üreten bir sistem hatasıdır. Gerçek ilerleme, merkeziyetçi kontrolün tasfiyesi ve kararların, o kararların sonuçlarına katlanan mülkiyet sahibi rasyonel aktörlere bırakılmasıyla mümkündür.
+
+================================================================================
+
+BAŞLIK: Tambov Ayaklanması: Bolşevik Terörü ve Bir Halkın Çöküşü
+
+Tambov Ayaklanması veya köylülerin deyimiyle "Antonovşçina", Sovyet tarihinin en kanlı ve en trajik sayfalarından biri olarak modern tarih yazımında yerini almaktadır. 1920-1921 yılları arasında Rusya’nın Tambov bölgesinde patlak veren bu devasa isyan, Bolşevik iktidarının "Savaş Komünizmi" politikalarına karşı bir halk patlaması gibi görünse de, hem isyancıların stratejik hataları hem de Sovyet devletinin uyguladığı eşi benzeri görülmemiş şiddet sarmalı bakımından derinlemesine incelenmeyi hak etmektedir. Bu yazı, Tambov Ayaklanması’nı askeri ve siyasi bir başarısızlık olarak eleştirirken, aynı zamanda bu isyanı bastırmak adına Komünist yönetimin başvurduğu sistematik katliamları ve insanlık dışı yöntemleri detaylandıracaktır.
 
 Ayaklanmanın temellerine bakıldığında, Bolşeviklerin "prodrazvyorstka" (zorunlu ürün alımı) sistemiyle köylünün elindeki son tahıl tanesine kadar el koyması, kırsal kesimde bir varoluş krizi yaratmıştı. Ancak, Alexander Antonov liderliğindeki isyancıların bu krize verdiği tepki, rasyonel bir siyasi programdan ziyade, yıkıcı bir öfke patlamasına dönüştü. İsyancıların en büyük hatası, merkezi bir otoriteye karşı dağınık, yerel ve vizyonsuz bir gerilla savaşına girişmeleriydi. Tambov isyancıları, bir devlet kurma veya alternatif bir yönetim modeli sunma kapasitesinden yoksundu. Eleştirel bir perspektiften bakıldığında, isyanın bu plansız yapısı, bölge halkını korumaktan ziyade, onları Bolşevik savaş makinesinin önüne savunmasız bir şekilde atmış oldu. İsyancılar, Kızıl Ordu’nun lojistik gücünü ve ideolojik kararlılığını hafife alarak, aslında kendi sonlarını ve destekledikleri köylülerin felaketini hazırladılar.
 
@@ -329,6 +185,7 @@ Ayaklanmanın başarısızlığına yönelik bir diğer eleştiri ise, isyancı 
 
 Komünist partinin eylemleri incelendiğinde, "Kızıl Terör"ün Tambov’da en saf ve en vahşi haliyle uygulandığı görülür. Çeka (gizli servis) birlikleri, köyleri yakıp yıkarak tarımsal üretimi tamamen durdurmuş ve bölgede yapay bir kıtlık yaratmıştır. "Kulak" (zengin köylü) düşmanlığı üzerinden yürütülen bu tasfiye harekatı, aslında mülkiyeti olan veya olmayan tüm köylüleri hedef almıştır. Bolşevikler için Tambov, sadece askeri bir mesele değil, ana zamanda köylülüğün "küçük burjuva" doğasının yok edilmesi gereken ideolojik bir savaş alanıydı. Bu nedenle, katliamlar sadece isyanı durdurmak için değil, geleneksel Rus köy yaşamını kökten kazımak için yapıldı. Tarihsel veriler, Tambov harekatı sırasında ve sonrasında yaklaşık 100.000 kişinin öldürüldüğünü, sürgün edildiğini veya kamplarda yok olduğunu göstermektedir.
 
-Tambov Ayaklanması’nın bastırılması, Bolşeviklerin askeri zaferi gibi görünse de aslında ahlaki ve siyasi bir çöküştü. İsyanın yarattığı dehşet o kadar büyüktü ki, Lenin bizzat "Savaş Komünizmi"nin sürdürülemez olduğunu kabul etmek zorunda kaldı ve 1921’de Yeni Ekonomik Politika’ya (NEP) geçiş yaptı. Ancak bu geri adım, dökülen kanları geri getirmediği gibi, devletin halkına karşı kullandığı şiddet tekelini daha da güçlendirdi. Tukhachevsky’nin Tambov’daki "başarısı", daha sonra Stalin dönemindeki Büyük Temizlik’te (ironik bir şekilde kendisinin de kurbanı olacağı) kullanılacak olan devlet terörü mekanizmasının temel taşı oldu.`
-  }
-];
+Tambov Ayaklanması’nın bastırılması, Bolşeviklerin askeri zaferi gibi görünse de aslında ahlaki ve siyasi bir çöküştü. İsyanın yarattığı dehşet o kadar büyüktü ki, Lenin bizzat "Savaş Komünizmi"nin sürdürülemez olduğunu kabul etmek zorunda kaldı ve 1921’de Yeni Ekonomik Politika’ya (NEP) geçiş yaptı. Ancak bu geri adım, dökülen kanları geri getirmediği gibi, devletin halkına karşı kullandığı şiddet tekelini daha da güçlendirdi. Tukhachevsky’nin Tambov’daki "başarısı", daha sonra Stalin dönemindeki Büyük Temizlik’te (ironik bir şekilde kendisinin de kurbanı olacağı) kullanılacak olan devlet terörü mekanizmasının temel taşı oldu.
+
+================================================================================
+

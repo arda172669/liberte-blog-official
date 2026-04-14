@@ -5,18 +5,9 @@ import './Home.css';
 import { articles, authors, categories, subcategories } from '../data/mockData';
 
 const Home = () => {
-  const wertfreiheitArticle = [...articles]
-    .filter(article => article.authorId === 'wertfreiheit')
-    .sort((left, right) => right.id - left.id)[0];
-
-  const recentArticlesData = [
-    wertfreiheitArticle,
-    ...[...articles]
-      .filter(article => article.id !== wertfreiheitArticle?.id)
-      .sort((left, right) => right.id - left.id)
-      .slice(0, 2)
-  ]
-    .filter(Boolean);
+  const recentArticlesData = [...articles]
+    .sort((left, right) => right.id - left.id)
+    .slice(0, 3);
 
   const featuredCategories = categories.map((category) => ({
     ...category,

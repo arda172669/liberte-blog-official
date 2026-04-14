@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import './ArticleCard.css';
-import ardaAvatar from '../assets/foto.jpeg';
+import wertfreiheitAvatar from '../assets/foto.jpeg';
 import { authors } from '../data/mockData';
 
 const ArticleCard = ({ article }) => {
@@ -13,8 +13,8 @@ const ArticleCard = ({ article }) => {
       <div className="article-header">
         <div className="author-info">
           <div className="author-avatar">
-            {authorInfo.avatar === 'arda-avatar' ? (
-              <img src={ardaAvatar} alt={authorInfo.name} className="author-avatar-card-img" />
+            {authorInfo.avatar === 'wertfreiheit-avatar' ? (
+              <img src={wertfreiheitAvatar} alt={authorInfo.name} className="author-avatar-card-img" />
             ) : (
               (authorInfo.name || 'G').charAt(0)
             )}

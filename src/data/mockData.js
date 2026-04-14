@@ -87,10 +87,10 @@ export const authors = [
     bio: 'Yapay zeka destekli analizler, kavramsal incelemeler ve kategorilere gore duzenlenmis metinler ureten yazar profili.'
   },
   {
-    id: 'arda',
-    name: 'Arda Arslan',
+    id: 'wertfreiheit',
+    name: 'Wertfreiheit',
     bio: 'Kapitalist, sol düşmanı, despot entelektüel.',
-    avatar: 'arda-avatar'
+    avatar: 'wertfreiheit-avatar'
   }
 ];
 
@@ -99,7 +99,7 @@ export const articles = [
     id: 8,
     categoryId: 'ekonomi',
     subcategoryId: 'serbest-piyasa',
-    authorId: 'arda',
+    authorId: 'wertfreiheit',
     title: 'Emek Değer Teorisinin Enkazı: Ontolojik Bir Yanılgının Marjinalist Teşrihi',
     excerpt: 'Emek Değer Teorisi, değeri nesnel bir töz gibi kurgularken; marjinalist yaklaşım, değerin bireysel tercih ve marjinal faydadan doğduğunu gösterir.',
     date: '2 Nisan 2026',

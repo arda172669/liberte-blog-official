@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, FileText, Layers3 } from 'lucide-react';
 import './AuthorsPage.css';
 import { articles, authors, categories, subcategories } from '../data/mockData';
-import ardaAvatar from '../assets/foto.jpeg';
+import wertfreiheitAvatar from '../assets/foto.jpeg';
 
 const AuthorsPage = () => {
   const authorsWithStats = authors.map((author) => {
@@ -66,8 +66,8 @@ const AuthorsPage = () => {
                 <div className="author-card-top">
                   <Link to={`/profile/${author.id}`} className="author-card-avatar-link" aria-hidden="true">
                     <div className="author-card-avatar">
-                      {author.avatar === 'arda-avatar' ? (
-                        <img src={ardaAvatar} alt={author.name} className="author-avatar-img" />
+                      {author.avatar === 'wertfreiheit-avatar' ? (
+                        <img src={wertfreiheitAvatar} alt={author.name} className="author-avatar-img" />
                       ) : (
                         author.name.split(' ').pop()?.charAt(0) || 'Y'
                       )}

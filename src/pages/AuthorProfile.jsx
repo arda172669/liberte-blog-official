@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import ArticleCard from '../components/ArticleCard';
 import './AuthorProfile.css';
 import { authors, articles, categories } from '../data/mockData';
-import ardaAvatar from '../assets/foto.jpeg';
+import wertfreiheitAvatar from '../assets/foto.jpeg';
 
 const AuthorProfile = () => {
   const { id } = useParams();
@@ -22,8 +22,8 @@ const AuthorProfile = () => {
       <div className="container">
         <div className="author-header glass-panel">
           <div className="author-avatar-large">
-            {currentAuthor.avatar === 'arda-avatar' ? (
-              <img src={ardaAvatar} alt={currentAuthor.name} className="author-avatar-img" />
+            {currentAuthor.avatar === 'wertfreiheit-avatar' ? (
+              <img src={wertfreiheitAvatar} alt={currentAuthor.name} className="author-avatar-img" />
             ) : (
               currentAuthor.name.split(' ').pop()?.charAt(0) || 'Y'
             )}

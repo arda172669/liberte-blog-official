@@ -4,6 +4,7 @@ import { ArrowRight, FileText, Layers3 } from 'lucide-react';
 import './AuthorsPage.css';
 import { articles, authors, categories, subcategories } from '../data/mockData';
 import wertfreiheitAvatar from '../assets/foto.jpeg';
+import systemAuthorAvatar from '../assets/system-author.png';
 
 const AuthorsPage = () => {
   const authorsWithStats = authors.map((author) => {
@@ -68,6 +69,8 @@ const AuthorsPage = () => {
                     <div className="author-card-avatar">
                       {author.avatar === 'wertfreiheit-avatar' ? (
                         <img src={wertfreiheitAvatar} alt={author.name} className="author-avatar-img" />
+                      ) : author.avatar === 'system-author-avatar' ? (
+                        <img src={systemAuthorAvatar} alt={author.name} className="author-avatar-img" />
                       ) : (
                         author.name.split(' ').pop()?.charAt(0) || 'Y'
                       )}

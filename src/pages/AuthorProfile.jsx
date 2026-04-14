@@ -4,6 +4,7 @@ import ArticleCard from '../components/ArticleCard';
 import './AuthorProfile.css';
 import { authors, articles, categories } from '../data/mockData';
 import wertfreiheitAvatar from '../assets/foto.jpeg';
+import systemAuthorAvatar from '../assets/system-author.png';
 
 const AuthorProfile = () => {
   const { id } = useParams();
@@ -24,6 +25,8 @@ const AuthorProfile = () => {
           <div className="author-avatar-large">
             {currentAuthor.avatar === 'wertfreiheit-avatar' ? (
               <img src={wertfreiheitAvatar} alt={currentAuthor.name} className="author-avatar-img" />
+            ) : currentAuthor.avatar === 'system-author-avatar' ? (
+              <img src={systemAuthorAvatar} alt={currentAuthor.name} className="author-avatar-img" />
             ) : (
               currentAuthor.name.split(' ').pop()?.charAt(0) || 'Y'
             )}

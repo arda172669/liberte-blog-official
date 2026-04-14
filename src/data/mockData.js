@@ -84,7 +84,8 @@ export const authors = [
   {
     id: 'yz-yazilari',
     name: 'sistem yazıları',
-    bio: 'Yapay zeka destekli analizler, kavramsal incelemeler ve kategorilere gore duzenlenmis metinler ureten yazar profili.'
+    bio: 'Yapay zeka destekli analizler, kavramsal incelemeler ve kategorilere gore duzenlenmis metinler ureten yazar profili.',
+    avatar: 'system-author-avatar'
   },
   {
     id: 'wertfreiheit',

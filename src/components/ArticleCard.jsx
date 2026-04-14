@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import './ArticleCard.css';
 import wertfreiheitAvatar from '../assets/foto.jpeg';
+import systemAuthorAvatar from '../assets/system-author.png';
 import { authors } from '../data/mockData';
 
 const ArticleCard = ({ article }) => {
@@ -15,6 +16,8 @@ const ArticleCard = ({ article }) => {
           <div className="author-avatar">
             {authorInfo.avatar === 'wertfreiheit-avatar' ? (
               <img src={wertfreiheitAvatar} alt={authorInfo.name} className="author-avatar-card-img" />
+            ) : authorInfo.avatar === 'system-author-avatar' ? (
+              <img src={systemAuthorAvatar} alt={authorInfo.name} className="author-avatar-card-img" />
             ) : (
               (authorInfo.name || 'G').charAt(0)
             )}
